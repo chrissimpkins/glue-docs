@@ -74,7 +74,7 @@ Glue respects your assignment of directory priority in the standard left to righ
 
 .. note::
 
-	Use the ``Glue Settings - User`` settings file rather than the default file.  The default settings are reset with Glue updates!
+	Use the ``Glue Settings - User`` settings file rather than the default file.  The default settings are overwritten on Glue updates!
 
 Set Your PS1
 -------------
