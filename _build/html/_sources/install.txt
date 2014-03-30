@@ -83,8 +83,7 @@ Give your prompt a little style.  Change the default by adding the ``glue_ps1`` 
 .. code:: json
 
 	{
-		"glue_ps1" : "✪",
-		[...]
+		"glue_ps1" : "✪"
 	}
 
 And here's what you get:
