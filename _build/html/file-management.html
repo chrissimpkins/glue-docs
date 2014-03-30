@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>File Management &mdash; Glue 0.9.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.9.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Glue 0.9.0 documentation" href="index.html"/>
+        <link rel="next" title="Extend Glue" href="extend-glue.html"/>
+        <link rel="prev" title="Navigation" href="navigation.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Glue</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#change-directories-with-cd">Change Directories with CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-working-directory">The Working Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">File Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-files-by-path">Open Files by Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-files-by-wildcard">Open Files by Wildcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-file">Create a New File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-management-with-system-utilities">File Management with System Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#glue-plugin-license">Glue Plugin License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#glue-documentation-license">Glue Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Glue</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">File Management</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="file-management">
+<h1>File Management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h1>
+<p>Glue includes commands that allow you to open files in the Sublime Text editor by path or wildcard.</p>
+<div class="section" id="open-files-by-path">
+<h2>Open Files by Path<a class="headerlink" href="#open-files-by-path" title="Permalink to this headline">¶</a></h2>
+<p>To open files by filepath, use the <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt> sub-command with one or more filepath arguments:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue open &lt;file&gt; [file]
+</pre></div>
+</div>
+<p>For example, to open the files <tt class="docutils literal"><span class="pre">test.txt</span></tt> and <tt class="docutils literal"><span class="pre">test2.txt</span></tt> from the current working directory in the editor, use the following command:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue open test.txt test2.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-files-by-wildcard">
+<h2>Open Files by Wildcard<a class="headerlink" href="#open-files-by-wildcard" title="Permalink to this headline">¶</a></h2>
+<p>To open files by wildcard value, use the <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt> sub-command with a wildcard argument:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue wco &lt;wildcard&gt;
+</pre></div>
+</div>
+<p>The following example will open all Python <tt class="docutils literal"><span class="pre">.py</span></tt> files in the sub-directory <tt class="docutils literal"><span class="pre">src</span></tt> on Unix/Linux systems:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue wco &#39;/src/*.py&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-new-file">
+<h2>Create a New File<a class="headerlink" href="#create-a-new-file" title="Permalink to this headline">¶</a></h2>
+<p>Create a new file from the command line with:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue new
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-management-with-system-utilities">
+<h2>File Management with System Utilities<a class="headerlink" href="#file-management-with-system-utilities" title="Permalink to this headline">¶</a></h2>
+<p>You can use system utilities to manage your project files with Glue just as you would from a separate terminal.</p>
+<p>For example, on Linux/Unix systems <tt class="docutils literal"><span class="pre">rm</span> <span class="pre">&lt;filepath&gt;</span></tt> will delete a file and <tt class="docutils literal"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">&lt;dirpath&gt;</span></tt> will remove the directory on <tt class="docutils literal"><span class="pre">dirpath</span></tt> and all of its contents. <tt class="docutils literal"><span class="pre">touch</span> <span class="pre">&lt;filepath&gt;</span></tt> will create a new file.</p>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="extend-glue.html" class="btn btn-neutral float-right" title="Extend Glue"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="navigation.html" class="btn btn-neutral" title="Navigation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

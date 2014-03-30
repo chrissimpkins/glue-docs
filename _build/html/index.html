@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Glue &mdash; Glue 1.0.0 documentation</title>
+  <title>Glue &mdash; Glue 0.9.0 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'1.0.0',
+        VERSION:'0.9.0',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Glue 1.0.0 documentation" href="#"/>
+    <link rel="top" title="Glue 0.9.0 documentation" href="#"/>
         <link rel="next" title="Install Glue" href="install.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -70,7 +70,40 @@
         
             <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install Glue</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#instructions">Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-path">Set Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-ps1">Set Your PS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#change-directories-with-cd">Change Directories with CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-working-directory">The Working Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="file-management.html">File Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-path">Open Files by Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-wildcard">Open Files by Wildcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#create-a-new-file">Create a New File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#file-management-with-system-utilities">File Management with System Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-the-glue-commands-directory">Create the Glue-Commands Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-a-glue-json-file">Create a glue.json File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#define-your-command-extensions">Define Your Command Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#use-your-extensions">Use Your Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#system-utility-example">System Utility Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#launch-url-in-default-browser-example">Launch URL in Default Browser Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#multiple-application-version-example">Multiple Application Version Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#shell-script-example">Shell Script Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
@@ -108,15 +141,155 @@
   <div class="section" id="glue">
 <h1>Glue<a class="headerlink" href="#glue" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="join-your-shell-sublime-text-in-quasi-perfect-harmony">
-<h2>Join Your Shell &amp; Sublime Text in Quasi-Perfect Harmony<a class="headerlink" href="#join-your-shell-sublime-text-in-quasi-perfect-harmony" title="Permalink to this headline">¶</a></h2>
-<p>Glue is an extensible plug-in for the Sublime Text 2 &amp; 3 text editor that</p>
+<h2>Join Your Shell &amp; Sublime Text in Quasi-Perfect* Harmony<a class="headerlink" href="#join-your-shell-sublime-text-in-quasi-perfect-harmony" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/chrissimpkins/glue">Glue</a> is a cross-platform, <a class="reference external" href="extend-glue.html">extensible</a> plug-in for <a class="reference external" href="http://www.sublimetext.com/">Sublime Text 2 and 3</a> that connects your favorite editor to your shell.</p>
+</div>
+<div class="section" id="launch">
+<h2>Launch<a class="headerlink" href="#launch" title="Permalink to this headline">¶</a></h2>
+<p><strong>Use the right click menu in your project sidebar:</strong></p>
+<img alt="_images/popup-open-glue.png" src="_images/popup-open-glue.png" />
+<p><strong>the Command Palette:</strong></p>
+<img alt="_images/command-palette-open.png" src="_images/command-palette-open.png" />
+<p><strong>or a keybinding:</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span class="n">Ctrl</span> <span class="o">-</span> <span class="n">Alt</span> <span class="o">-</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enter-commands">
+<h2>Enter Commands<a class="headerlink" href="#enter-commands" title="Permalink to this headline">¶</a></h2>
+<p>Use the command input box at the bottom of the screen to enter system commands just like you would in your terminal:</p>
+<img alt="_images/command-entry-example.png" src="_images/command-entry-example.png" />
+<p>and the standard output is displayed in an editor view.</p>
+</div>
+<div class="section" id="system-utilities">
+<h2>System Utilities<a class="headerlink" href="#system-utilities" title="Permalink to this headline">¶</a></h2>
+<p>It works with system utilities:</p>
+<p><strong>grep</strong></p>
+<img alt="_images/grep-example.png" src="_images/grep-example.png" />
+<p><strong>curl</strong></p>
+<img alt="_images/curl-example.png" src="_images/curl-example.png" />
+</div>
+<div class="section" id="scripting-languages">
+<h2>Scripting Languages<a class="headerlink" href="#scripting-languages" title="Permalink to this headline">¶</a></h2>
+<p>It works with scripting languages:</p>
+<img alt="_images/scripting-language-example.png" src="_images/scripting-language-example.png" />
+</div>
+<div class="section" id="inter-process-communication">
+<h2>Inter-Process Communication<a class="headerlink" href="#inter-process-communication" title="Permalink to this headline">¶</a></h2>
+<p>Pipelining data between processes works.  You get the standard output from the final executable in the sequence:</p>
+<img alt="_images/pipelining-examples.png" src="_images/pipelining-examples.png" />
+</div>
+<div class="section" id="version-control">
+<h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<p>Version control tasks are accessible inside the editor:</p>
+<img alt="_images/git-example.png" src="_images/git-example.png" />
+</div>
+<div class="section" id="compile-unit-test-profile-minify-compress">
+<h2>Compile, Unit Test, Profile, Minify, Compress...<a class="headerlink" href="#compile-unit-test-profile-minify-compress" title="Permalink to this headline">¶</a></h2>
+<p>You get the picture.</p>
+</div>
+<div class="section" id="navigation-working-directory-state">
+<h2>Navigation &amp; Working Directory State<a class="headerlink" href="#navigation-working-directory-state" title="Permalink to this headline">¶</a></h2>
+<p>Glue includes its own version of the <tt class="docutils literal"><span class="pre">cd</span></tt> command that allows you to navigate around your directory structure while maintaining your current working directory state between calls to the shell.  See the <a class="reference external" href="navigation.html">Navigation documentation</a> for details.</p>
+</div>
+<div class="section" id="file-management">
+<h2>File Management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h2>
+<p>Open files in the Sublime Text editor by file path:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ glue open &lt;filepath&gt; [filepath2] [...]
+</pre></div>
+</div>
+<p>or by wildcard pattern:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ glue wco &lt;wildcard&gt;
+</pre></div>
+</div>
+<p>And create new files with:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ glue new
+</pre></div>
+</div>
+</div>
+<div class="section" id="extend-sublime-text-with-glue-extensions">
+<h2>Extend Sublime Text With Glue Extensions<a class="headerlink" href="#extend-sublime-text-with-glue-extensions" title="Permalink to this headline">¶</a></h2>
+<p>You can build Sublime Text extensions <strong>with your favorite language</strong> or extend Sublime Text <strong>with any system utility</strong> using Glue command extensions.  These are aliases for system commands that can be called from the Glue command line using the syntax:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ glue &lt;your-command&gt; [optional arguments]
+</pre></div>
+</div>
+<p>You have the option to pass additional command line arguments, clipboard data, or the current working directory path to the mapped system command with <a class="reference external" href="extend-glue.html#define-your-command-extensions">template tags</a>.</p>
+<div class="section" id="the-glue-commands-directory">
+<h3>The Glue-Commands Directory<a class="headerlink" href="#the-glue-commands-directory" title="Permalink to this headline">¶</a></h3>
+<p>Create a directory in your Sublime Text <tt class="docutils literal"><span class="pre">Packages</span></tt> directory (<tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Browse</span> <span class="pre">Packages</span></tt>) that is named <tt class="docutils literal"><span class="pre">Glue-Commands</span></tt>.</p>
+</div>
+<div class="section" id="the-glue-json-file">
+<h3>The glue.json File<a class="headerlink" href="#the-glue-json-file" title="Permalink to this headline">¶</a></h3>
+<p>Create a new file in this directory with the following path <tt class="docutils literal"><span class="pre">Glue-Commands/glue.json</span></tt>.</p>
+<p>Use the <tt class="docutils literal"><span class="pre">glue.json</span></tt> file to create Glue extensions with <tt class="docutils literal"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">command</span> <span class="pre">name</span></tt> to <tt class="docutils literal"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">command</span> <span class="pre">string</span></tt> mapping.</p>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>You could make a command that executes a local image compression shell script on the path <tt class="docutils literal"><span class="pre">/Users/me/scripts/cruncher.sh</span></tt> with the following syntax:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+   <span class="s">&quot;crunch&quot;</span><span class="p">:</span> <span class="s">&quot;/Users/me/scripts/cruncher.sh {{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then use it in Glue like this:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ glue crunch image.png
+</pre></div>
+</div>
+<p>The mapped system command is executed as:</p>
+<div class="code highlight-python"><div class="highlight"><pre>/Users/me/scripts/cruncher.sh image.png
+</pre></div>
+</div>
+<p>in your current working directory and is accessible in any Sublime Text project.</p>
+<p>Make as many as you&#8217;d like.  You can use the following command to reference an alphabetized list of your extensions:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ glue user
+</pre></div>
+</div>
+<p>More detailed extension documentation (including additional examples) is <a class="reference external" href="extend-glue.html">available here</a>.</p>
+</div>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>✱ Glue communicates with your existing shell and there is no persistence of the data stream after your command is executed.  See the <a class="reference external" href="limitations.html">limitations</a> that result from this application structure.</p>
 </div>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install Glue</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#instructions">Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-path">Set Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-ps1">Set Your PS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#change-directories-with-cd">Change Directories with CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-working-directory">The Working Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="file-management.html">File Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-path">Open Files by Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-wildcard">Open Files by Wildcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#create-a-new-file">Create a New File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#file-management-with-system-utilities">File Management with System Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-the-glue-commands-directory">Create the Glue-Commands Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-a-glue-json-file">Create a glue.json File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#define-your-command-extensions">Define Your Command Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#use-your-extensions">Use Your Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#system-utility-example">System Utility Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#launch-url-in-default-browser-example">Launch URL in Default Browser Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#multiple-application-version-example">Multiple Application Version Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#shell-script-example">Shell Script Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Glue 0.9.0 documentation</title>
+  <title>Navigation &mdash; Glue 0.9.0 documentation</title>
   
 
   
@@ -31,7 +31,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
     
 
@@ -45,13 +44,8 @@
 
   
     <link rel="top" title="Glue 0.9.0 documentation" href="index.html"/>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+        <link rel="next" title="File Management" href="file-management.html"/>
+        <link rel="prev" title="Install Glue" href="install.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -65,7 +59,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         <a href="index.html" class="icon icon-home"> Glue</a>
-        <form class="wy-form" action="#" method="get">
+        <form class="wy-form" action="search.html" method="get">
   <input type="text" name="q" placeholder="Search docs" />
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
@@ -75,39 +69,26 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix">
         
         
-            <ul>
+            <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install Glue</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-path">Set Your PATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-ps1">Set Your PS1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#change-directories-with-cd">Change Directories with CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-working-directory">The Working Directory</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#change-directories-with-cd">Change Directories with CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-working-directory">The Working Directory</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="file-management.html">File Management</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-path">Open Files by Path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-wildcard">Open Files by Wildcard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file-management.html#create-a-new-file">Create a New File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file-management.html#file-management-with-system-utilities">File Management with System Utilities</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-the-glue-commands-directory">Create the Glue-Commands Directory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-a-glue-json-file">Create a glue.json File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#define-your-command-extensions">Define Your Command Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#use-your-extensions">Use Your Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#system-utility-example">System Utility Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#launch-url-in-default-browser-example">Launch URL in Default Browser Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#multiple-application-version-example">Multiple Application Version Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#shell-script-example">Shell Script Example</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a></li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
 <li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
@@ -139,27 +120,57 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href=""></a></li>
+  <li><a href="">Navigation</a></li>
   
 </ul>
 <hr/>
 
           
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="navigation">
+<h1>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="change-directories-with-cd">
+<h2>Change Directories with CD<a class="headerlink" href="#change-directories-with-cd" title="Permalink to this headline">¶</a></h2>
+<p>Glue includes its own version of the <tt class="docutils literal"><span class="pre">cd</span></tt> command.  Use the following syntax:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ cd &lt;directory-path&gt;
+</pre></div>
+</div>
+<p>To navigate to a parent directory, use the following idiom:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ cd ..
+</pre></div>
+</div>
+<p>Glue maintains the state of your working directory between command runs <em>while you keep the Glue view open</em>.  When you close the Glue view or use the <tt class="docutils literal"><span class="pre">exit</span></tt> command, this information is discarded and you start fresh the next time that you open Glue.</p>
+</div>
+<div class="section" id="the-working-directory">
+<h2>The Working Directory<a class="headerlink" href="#the-working-directory" title="Permalink to this headline">¶</a></h2>
+<p>Your initial working directory differs based upon how you launch Glue.</p>
+<div class="section" id="sidebar-right-click-menu-working-directory">
+<h3>Sidebar Right Click Menu Working Directory<a class="headerlink" href="#sidebar-right-click-menu-working-directory" title="Permalink to this headline">¶</a></h3>
+<p>When you launch Glue with the right click menu over any of your project files or the root project directory, the root project directory is used as the working directory.</p>
+<p>If you launch Glue in this fashion over a subdirectory, then the subdirectory is used as the initial working directory.</p>
+</div>
+<div class="section" id="command-palette-working-directory">
+<h3>Command Palette Working Directory<a class="headerlink" href="#command-palette-working-directory" title="Permalink to this headline">¶</a></h3>
+<p>When you launch Glue with the Command Palette with a project file open in the editor, the root project directory is defined as the working directory.</p>
+<p>Note that if you do not have a project file open in the editor, even if a project is open and in view on the sidebar, your initial working directory is set to your User directory as defined by the <a class="reference external" href="http://docs.python.org/2/library/os.path.html?highlight=os.path#os.path.expanduser">Python os module expanduser method</a>:</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is the result of how Sublime Text handles file paths for new buffers that are opened in the editor.  Glue doesn&#8217;t have access to the project directory path from the Command Palette unless a project file view is open in the editor.</p>
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
           <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="file-management.html" class="btn btn-neutral float-right" title="File Management"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="Install Glue"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

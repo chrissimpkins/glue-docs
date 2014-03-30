@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Extend Glue &mdash; Glue 0.9.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.9.0',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Glue 0.9.0 documentation" href="index.html"/>
+        <link rel="next" title="Limitations" href="limitations.html"/>
+        <link rel="prev" title="File Management" href="file-management.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Glue</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-path">Set Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-ps1">Set Your PS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#change-directories-with-cd">Change Directories with CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-working-directory">The Working Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="file-management.html">File Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-path">Open Files by Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-wildcard">Open Files by Wildcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#create-a-new-file">Create a New File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#file-management-with-system-utilities">File Management with System Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Extend Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-the-glue-commands-directory">Create the Glue-Commands Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-glue-json-file">Create a glue.json File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#define-your-command-extensions">Define Your Command Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-your-extensions">Use Your Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-utility-example">System Utility Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launch-url-in-default-browser-example">Launch URL in Default Browser Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-application-version-example">Multiple Application Version Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shell-script-example">Shell Script Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#glue-plugin-license">Glue Plugin License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#glue-documentation-license">Glue Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Glue</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Extend Glue</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="extend-glue">
+<h1>Extend Glue<a class="headerlink" href="#extend-glue" title="Permalink to this headline">¶</a></h1>
+<p>Glue allows you to extend the Sublime Text editor with system utilities, your own compiled executables, shell scripts, and source from any scripting language that is supported on your machine.</p>
+<p>This is performed with Glue extensions that function as system command aliases and can be called from the command line with the syntax:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue &lt;your-command&gt; [args]
+</pre></div>
+</div>
+<p>They are incredibly simple to develop and require absolutely no programming knowledge (but can be hooked into anything that you develop with the capability to process data from the standard input stream):</p>
+<div class="section" id="create-the-glue-commands-directory">
+<h2>Create the Glue-Commands Directory<a class="headerlink" href="#create-the-glue-commands-directory" title="Permalink to this headline">¶</a></h2>
+<p>Create a <tt class="docutils literal"><span class="pre">Glue-Commands</span></tt> directory inside your Sublime Text <tt class="docutils literal"><span class="pre">Packages</span></tt> directory.   You can open your Sublime Text <tt class="docutils literal"><span class="pre">Packages</span></tt> directory with the menu item <tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Browse</span> <span class="pre">Packages</span></tt>.</p>
+</div>
+<div class="section" id="create-a-glue-json-file">
+<h2>Create a glue.json File<a class="headerlink" href="#create-a-glue-json-file" title="Permalink to this headline">¶</a></h2>
+<p>Create a <tt class="docutils literal"><span class="pre">glue.json</span></tt> file inside the <tt class="docutils literal"><span class="pre">Glue-Commands</span></tt> directory.</p>
+</div>
+<div class="section" id="define-your-command-extensions">
+<h2>Define Your Command Extensions<a class="headerlink" href="#define-your-command-extensions" title="Permalink to this headline">¶</a></h2>
+<p>Commands are defined in the <tt class="docutils literal"><span class="pre">glue.json</span></tt> file with a simple mapping of JSON key:value pairs using the following syntax</p>
+<div class="code json highlight-python"><div class="highlight"><pre>{
+        &quot;&lt;command-name-1&gt;&quot;: &quot;&lt;system command string 1&gt;&quot;,
+        &quot;&lt;command-name-2&gt;&quot;: &quot;&lt;system command string 2&gt;&quot;,
+        [...]
+}
+</pre></div>
+</div>
+<p>You have the option to include these replacement tags in your system command string:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Template Tag</th>
+<th class="head">Definition</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">{{args}}</span></tt></td>
+<td>additional arguments that you include on the command line</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">{{clipboard}}</span></tt></td>
+<td>the contents of the clipboard</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">{{pwd}}</span></tt></td>
+<td>the current working directory path</td>
+</tr>
+</tbody>
+</table>
+<p>These extensions are immediately available when you save the <tt class="docutils literal"><span class="pre">glue.json</span></tt> file.</p>
+</div>
+<div class="section" id="use-your-extensions">
+<h2>Use Your Extensions<a class="headerlink" href="#use-your-extensions" title="Permalink to this headline">¶</a></h2>
+<p>Launch Glue and run your command extension(s) with the following syntax:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue &lt;command-name&gt; [args]
+</pre></div>
+</div>
+<p>Your command is executed from your current working directory and data from the standard output stream (and standard error stream for any non-zero exit status codes) are displayed in the Glue view.</p>
+</div>
+<div class="section" id="system-utility-example">
+<h2>System Utility Example<a class="headerlink" href="#system-utility-example" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s make a command that allows us to view HTTP GET response headers for a web application that we are developing and call it <tt class="docutils literal"><span class="pre">head</span></tt>.  We&#8217;ll use cURL for this task.</p>
+<p>Add the following to your <tt class="docutils literal"><span class="pre">glue.json</span></tt> file:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;head&quot;</span> <span class="p">:</span> <span class="s">&quot;curl -I -s -L {{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Save the file and the command is immediately available for use.  Launch Glue and enter any URL as an argument to your command in order to see the GET response headers for the site in the Glue view:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue head www.supafresh.com
+</pre></div>
+</div>
+</div>
+<div class="section" id="launch-url-in-default-browser-example">
+<h2>Launch URL in Default Browser Example<a class="headerlink" href="#launch-url-in-default-browser-example" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt> command opens a URL in your default browser.  Let&#8217;s make an extension that performs a Google search for a query that we enter on the command line:</p>
+<p>Add the following to your <tt class="docutils literal"><span class="pre">glue.json</span></tt> file:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;google&quot;</span> <span class="p">:</span> <span class="s">&quot;glue browse https://www.google.com/#q={{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Save the file and then use the command with a URL encoded query like this:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue google sublime+package+control
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiple-application-version-example">
+<h2>Multiple Application Version Example<a class="headerlink" href="#multiple-application-version-example" title="Permalink to this headline">¶</a></h2>
+<p>You can alias multiple versions of an application so that you can easily access them for testing purposes.  Let&#8217;s create extensions for current versions of Python 2 &amp; 3:</p>
+<p>For Windows users, you can add the following to your <tt class="docutils literal"><span class="pre">glue.json</span></tt> file (assuming these are the appropriate versions and install paths):</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;python2&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python27</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;python3&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python34</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note the escaped backward slashes in the path string.</p>
+<p>Linux and Unix users who have the Python executables in <tt class="docutils literal"><span class="pre">/usr/bin</span></tt> can make the following extensions:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;python2&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/bin/python {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;python3&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/bin/python3 {{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And Mac OSX users who install Python with Homebrew can create their extensions like this:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;python2&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/bin/python {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;python3&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python3/3.4.0/bin/python3.4 {{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Confirm the above filepath settings on your own machine.</p>
+<p>Then use the separate versions of Python with the following commands:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue python2 --version
+Python 2.7.6
+
+█ glue python3 --version
+Python 3.4.0
+</pre></div>
+</div>
+</div>
+<div class="section" id="shell-script-example">
+<h2>Shell Script Example<a class="headerlink" href="#shell-script-example" title="Permalink to this headline">¶</a></h2>
+<p>For the shell script example, we will make a JavaScript minifier and obfuscator command that is hooked into the YUICompressor.  If you are following along, you can download YUICompressor from <a class="reference external" href="https://github.com/yui/yuicompressor">the GitHub repository</a>.  You will need to have Java version 1.4+ installed to use it.  Unpack the repository and move the <tt class="docutils literal"><span class="pre">yuicompressor-2.4.8.jar</span></tt> file to a directory for safe keeping (you will run it from this directory).</p>
+<p>Next, create a shell script named <tt class="docutils literal"><span class="pre">minijs.sh</span></tt>.  Include the following script and modify the YUI_PATH variable with the actual path to your YUICompressor jar file:</p>
+<div class="code sh highlight-python"><div class="highlight"><pre>#!/bin/sh
+
+# Modify YUI_PATH with the path to the yuicompressor jar file
+YUI_PATH=&quot;path/to/yuicompressor-2.4.8.jar&quot;
+
+if [ $# -eq 0 ]; then
+  echo &quot;Please include the file path(s) for the file(s) that you would like to compress.&quot; 1&gt;&amp;2
+  exit 1
+fi
+
+for file in &quot;$@&quot;;
+do
+if [ -f &quot;$file&quot; ]; then
+      java -jar &quot;$YUI_PATH&quot; -o &quot;${file%%.*}-min.js&quot; &quot;$file&quot;
+      if (( $? )); then
+          echo &quot;$file was not able to be minified&quot;
+          exit 1
+      else
+          echo &quot;$file was minified to ${file%%.*}-min.js&quot;
+      fi
+  else
+      echo &quot;Unable to find the javascript file &#39;$file&#39;.&quot;
+fi
+done;
+exit 0
+</pre></div>
+</div>
+<p>The script confirms that the filepath argument is a file, then minifies and obfuscates the JavaScript in the file.  It will work with more than one file if you pass multiple files to it in your command.  The minified version is renamed to <tt class="docutils literal"><span class="pre">&lt;originalname&gt;-min.js</span></tt> and saved to the same directory as the original JavaScript file.</p>
+<p>Next, create a Glue extension that will serve as an alias for the call to this shell script when you use the <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">minijs</span></tt> command.  We&#8217;ll include the <tt class="docutils literal"><span class="pre">{{args}}</span></tt> template tag so that we can pass filepath arguments to our script:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;minijs&quot;</span> <span class="p">:</span> <span class="s">&quot;/path/to/minijs.sh {{args}}&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Launch Glue in your editor and minify JS files in the working directory with a command like this:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue minijs awesome.js
+</pre></div>
+</div>
+<p>The minified file is saved as <tt class="docutils literal"><span class="pre">awesome-min.js</span></tt> in the same directory.</p>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="limitations.html" class="btn btn-neutral float-right" title="Limitations"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="file-management.html" class="btn btn-neutral" title="File Management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
