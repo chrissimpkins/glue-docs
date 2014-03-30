@@ -46,7 +46,7 @@ Move the entire Glue directory into your Sublime Text Packages directory.
 Set Your PATH
 ----------------
 
-Open the Glue user settings file by navigating your menus to ``Preferences > Glue > Glue Settings - User``.  Include the following line in your JSON settings:
+Open the Glue user settings file by using the Sublime Text menus to navigate to ``Preferences > Glue > Glue Settings - User``.  Include the following line in your JSON settings:
 
 .. code:: json
 
@@ -55,12 +55,12 @@ Open the Glue user settings file by navigating your menus to ``Preferences > Glu
 		[...]
 	}
 
-Include your shell PATH variable settings as a colon or semicolon delimited string in this setting.  You can use the default settings as a reference:
+Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  You can use the default settings as a reference:
 
 .. code:: json
 
 	{
-		"glue_userpath" : "/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+		"glue_userpath" : "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
 		[...]
 	}
 

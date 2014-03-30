@@ -103,8 +103,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
-<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-your-shell">Glue and Your Shell</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
@@ -170,16 +169,16 @@
 </div>
 <div class="section" id="set-your-path">
 <h2>Set Your PATH<a class="headerlink" href="#set-your-path" title="Permalink to this headline">¶</a></h2>
-<p>Open the Glue user settings file by navigating your menus to <tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt>.  Include the following line in your JSON settings:</p>
+<p>Open the Glue user settings file by using the Sublime Text menus to navigate to <tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt>.  Include the following line in your JSON settings:</p>
 <div class="code json highlight-python"><div class="highlight"><pre>{
         &quot;glue_userpath&quot; : &quot;&lt;YOUR PATH&gt;&quot;,
         [...]
 }
 </pre></div>
 </div>
-<p>Include your shell PATH variable settings as a colon or semicolon delimited string in this setting.  You can use the default settings as a reference:</p>
+<p>Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  You can use the default settings as a reference:</p>
 <div class="code json highlight-python"><div class="highlight"><pre>{
-        &quot;glue_userpath&quot; : &quot;/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;,
+        &quot;glue_userpath&quot; : &quot;/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;,
         [...]
 }
 </pre></div>
