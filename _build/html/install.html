@@ -170,17 +170,15 @@
 <div class="section" id="set-your-path">
 <h2>Set Your PATH<a class="headerlink" href="#set-your-path" title="Permalink to this headline">¶</a></h2>
 <p>Open the Glue user settings file by using the Sublime Text menus to navigate to <tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt>.  Include the following line in your JSON settings:</p>
-<div class="code json highlight-python"><div class="highlight"><pre>{
-        &quot;glue_userpath&quot; : &quot;&lt;YOUR PATH&gt;&quot;,
-        [...]
-}
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;glue_userpath&quot;</span> <span class="p">:</span> <span class="s">&quot;&lt;YOUR PATH&gt;&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  You can use the default settings as a reference:</p>
-<div class="code json highlight-python"><div class="highlight"><pre>{
-        &quot;glue_userpath&quot; : &quot;/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;,
-        [...]
-}
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;glue_userpath&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$PATH</span></tt> in your terminal.  Windows users can enter the command <tt class="docutils literal"><span class="pre">ECHO</span> <span class="pre">%PATH%</span></tt> in cmd.exe.  Windows users should escape the backward slash characters in their PATH string like this:</p>

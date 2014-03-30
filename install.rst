@@ -51,8 +51,7 @@ Open the Glue user settings file by using the Sublime Text menus to navigate to 
 .. code:: json
 
 	{
-		"glue_userpath" : "<YOUR PATH>",
-		[...]
+		"glue_userpath" : "<YOUR PATH>"
 	}
 
 Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  You can use the default settings as a reference:
@@ -60,8 +59,7 @@ Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) 
 .. code:: json
 
 	{
-		"glue_userpath" : "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
-		[...]
+		"glue_userpath" : "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 	}
 
 To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command ``echo $PATH`` in your terminal.  Windows users can enter the command ``ECHO %PATH%`` in cmd.exe.  Windows users should escape the backward slash characters in their PATH string like this:
