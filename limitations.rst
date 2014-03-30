@@ -1,8 +1,8 @@
 Limitations
 ================
 
-Glue vs. Terminals/Shells
----------------------------
+Glue and Your Shell
+-----------------------
 
 Glue communicates with your shell and the data stream is disconnected when the standard output or standard error data is returned to Glue.  It works well for one-off commands that do not require further input to complete the requested task.
 
