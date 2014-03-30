@@ -64,11 +64,17 @@ Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) 
 		[...]
 	}
 
-To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command ``echo $PATH`` in your terminal emulator.  Windows users can enter the command ``ECHO %PATH%`` in cmd.exe.
+To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command ``echo $PATH`` in your terminal emulator.  Windows users can enter the command ``ECHO %PATH%`` in cmd.exe.  Windows users should escape the forward slash characters in the PATH like this:
 
-Glue respects your PATH priority in the standard left to right fashion as it attempts to locate system executables for your commands.  If you find that a different version of an executable is being launched, or that installed applications are not being located, please confirm that you have properly set your PATH in Glue.
+.. code:: json
 
-.. warning::
+	{
+		"glue_userpath": "WINDOWS"
+	}
+
+Glue respects your assignment of directory priority in the standard left to right sequence as it attempts to locate system executables for the commands that you submit.  If you find that a different version of an executable is being launched, or that installed applications are not being located, please confirm your PATH string in the Glue settings.
+
+.. note::
 
 	Use the ``Glue Settings - User`` settings file rather than the default file.  The default settings are reset with Glue updates!
 
