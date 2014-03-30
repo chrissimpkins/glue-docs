@@ -74,6 +74,8 @@
 <li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-path">Set Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-ps1">Set Your PS1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
 </ul>
 </li>
@@ -85,13 +87,23 @@
 <li class="toctree-l1"><a class="reference internal" href="file-management.html">File Management</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-path">Open Files by Path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-wildcard">Open Files by Wildcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#create-a-new-file">Create a New File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file-management.html#file-management-with-system-utilities">File Management with System Utilities</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-the-glue-commands-directory">Create the Glue-Commands Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-a-glue-json-file">Create a glue.json File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#define-your-command-extensions">Define Your Command Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#use-your-extensions">Use Your Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#system-utility-example">System Utility Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#launch-url-in-default-browser-example">Launch URL in Default Browser Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#multiple-application-version-example">Multiple Application Version Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#shell-script-example">Shell Script Example</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Limitations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
@@ -130,16 +142,12 @@
 <h1>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="glue-vs-terminals-shells">
 <h2>Glue vs. Terminals/Shells<a class="headerlink" href="#glue-vs-terminals-shells" title="Permalink to this headline">¶</a></h2>
-<p>Glue is not a command interpreter.  It communicates with your shell and the data stream is disconnected when the standard output or standard error data is returned to Glue.  It works well for one-off commands that do not require further input to complete the requested task.</p>
+<p>Glue communicates with your shell and the data stream is disconnected when the standard output or standard error data is returned to Glue.  It works well for one-off commands that do not require further input to complete the requested task.</p>
 <p>This structure leads to a several limitations.  In the following cases, you will need to return to your terminal to perform the tasks:</p>
 <ol class="arabic simple">
-<li>Use commands that require superuser privileges (you cannot enter credentials in the returned prompt)</li>
+<li>Use commands that require you to submit a superuser password</li>
 <li>Respond to standard input prompts from command line applications</li>
 </ol>
-</div>
-<div class="section" id="glue-and-special-shell-characters">
-<h2>Glue and Special Shell Characters<a class="headerlink" href="#glue-and-special-shell-characters" title="Permalink to this headline">¶</a></h2>
-<p>## TODO</p>
 </div>
 </div>
 
