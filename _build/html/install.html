@@ -183,9 +183,9 @@
 }
 </pre></div>
 </div>
-<p>To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$PATH</span></tt> in your terminal emulator.  Windows users can enter the command <tt class="docutils literal"><span class="pre">ECHO</span> <span class="pre">%PATH%</span></tt> in cmd.exe.  Windows users should escape the forward slash characters in the PATH like this:</p>
+<p>To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$PATH</span></tt> in your terminal.  Windows users can enter the command <tt class="docutils literal"><span class="pre">ECHO</span> <span class="pre">%PATH%</span></tt> in cmd.exe.  Windows users should escape the backward slash characters in their PATH string like this:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
-        <span class="s">&quot;glue_userpath&quot;</span><span class="p">:</span> <span class="s">&quot;WINDOWS&quot;</span>
+        <span class="s">&quot;glue_userpath&quot;</span><span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Windows</span><span class="se">\\</span><span class="s">system32;C:</span><span class="se">\\</span><span class="s">Windows;C:</span><span class="se">\\</span><span class="s">Windows</span><span class="se">\\</span><span class="s">System32</span><span class="se">\\</span><span class="s">Wbem;&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
