@@ -103,8 +103,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-vs-terminals-shells">Glue vs. Terminals/Shells</a></li>
-<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-special-shell-characters">Glue and Special Shell Characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-your-shell">Glue and Your Shell</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
@@ -228,35 +227,33 @@
 </div>
 <div class="section" id="multiple-application-version-example">
 <h2>Multiple Application Version Example<a class="headerlink" href="#multiple-application-version-example" title="Permalink to this headline">¶</a></h2>
-<p>You can alias multiple versions of an application so that you can easily access them for testing purposes.  Let&#8217;s create extensions for current versions of Python 2 &amp; 3:</p>
+<p>You can alias multiple versions of an application so that you can easily access them for testing purposes.  Let&#8217;s create extensions for recent versions of Python 2 &amp; 3:</p>
 <p>For Windows users, you can add the following to your <tt class="docutils literal"><span class="pre">glue.json</span></tt> file (assuming these are the appropriate versions and install paths):</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
-        <span class="s">&quot;python2&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python27</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span><span class="p">,</span>
-        <span class="s">&quot;python3&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python34</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span>
+        <span class="s">&quot;py27&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python27</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;py33&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python33</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;py34&quot;</span> <span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Python34</span><span class="se">\\</span><span class="s">python.exe {{args}}&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Note the escaped backward slashes in the path string.</p>
-<p>Linux and Unix users who have the Python executables in <tt class="docutils literal"><span class="pre">/usr/bin</span></tt> can make the following extensions:</p>
-<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
-        <span class="s">&quot;python2&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/bin/python {{args}}&quot;</span><span class="p">,</span>
-        <span class="s">&quot;python3&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/bin/python3 {{args}}&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 <p>And Mac OSX users who install Python with Homebrew can create their extensions like this:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
-        <span class="s">&quot;python2&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/bin/python {{args}}&quot;</span><span class="p">,</span>
-        <span class="s">&quot;python3&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python3/3.4.0/bin/python3.4 {{args}}&quot;</span>
+        <span class="s">&quot;py27&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/bin/python {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;py33&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python3/3.3.5/bin/python3.3 {{args}}&quot;</span><span class="p">,</span>
+        <span class="s">&quot;py34&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/Cellar/python3/3.4.0/bin/python3.4 {{args}}&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Confirm the above filepath settings on your own machine.</p>
 <p>Then use the separate versions of Python with the following commands:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue python2 --version
+<div class="code bash highlight-python"><div class="highlight"><pre>█ glue py27 --version
 Python 2.7.6
 
-█ glue python3 --version
+█ glue py33 --version
+Python 3.3.5
+
+█ glue py34 --version
 Python 3.4.0
 </pre></div>
 </div>

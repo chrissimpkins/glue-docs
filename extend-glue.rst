@@ -97,35 +97,28 @@ Save the file and then use the command with a URL encoded query like this:
 
 Multiple Application Version Example
 ----------------------------------------
-You can alias multiple versions of an application so that you can easily access them for testing purposes.  Let's create extensions for current versions of Python 2 & 3:
+You can alias multiple versions of an application so that you can easily access them for testing purposes.  Let's create extensions for recent versions of Python 2 & 3:
 
 For Windows users, you can add the following to your ``glue.json`` file (assuming these are the appropriate versions and install paths):
 
 .. code:: json
 
 	{
-		"python2" : "C:\\Python27\\python.exe {{args}}",
-		"python3" : "C:\\Python34\\python.exe {{args}}"
+		"py27" : "C:\\Python27\\python.exe {{args}}",
+		"py33" : "C:\\Python33\\python.exe {{args}}",
+		"py34" : "C:\\Python34\\python.exe {{args}}"
 	}
 
 Note the escaped backward slashes in the path string.
-
-Linux and Unix users who have the Python executables in ``/usr/bin`` can make the following extensions:
-
-.. code:: json
-
-	{
-		"python2" : "/usr/bin/python {{args}}",
-		"python3" : "/usr/bin/python3 {{args}}"
-	}
 
 And Mac OSX users who install Python with Homebrew can create their extensions like this:
 
 .. code:: json
 
 	{
-		"python2" : "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/bin/python {{args}}",
-		"python3" : "/usr/local/Cellar/python3/3.4.0/bin/python3.4 {{args}}"
+		"py27" : "/usr/local/Cellar/python/2.7.6/bin/python {{args}}",
+		"py33" : "/usr/local/Cellar/python3/3.3.5/bin/python3.3 {{args}}",
+		"py34" : "/usr/local/Cellar/python3/3.4.0/bin/python3.4 {{args}}"
 	}
 
 Confirm the above filepath settings on your own machine.
@@ -134,10 +127,13 @@ Then use the separate versions of Python with the following commands:
 
 .. code:: bash
 
-	█ glue python2 --version
+	█ glue py27 --version
 	Python 2.7.6
 
-	█ glue python3 --version
+	█ glue py33 --version
+	Python 3.3.5
+
+	█ glue py34 --version
 	Python 3.4.0
 
 
