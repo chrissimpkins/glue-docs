@@ -168,6 +168,7 @@ Contents
    extend-glue
    limitations
    issues
+   contribute
    license
 
 .. _limitations: limitations.html
