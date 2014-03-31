@@ -167,6 +167,7 @@ Contents
    file-management
    extend-glue
    limitations
+   issues
    license
 
 .. _limitations: limitations.html

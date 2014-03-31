@@ -191,7 +191,6 @@ Launch Glue in your editor and minify JS files in the working directory with a c
 The minified file is saved as ``awesome-min.js`` in the same directory.
 
 
-
 .. _the GitHub repository: https://github.com/yui/yuicompressor
 
 
