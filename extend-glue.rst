@@ -146,31 +146,31 @@ Next, create a shell script named ``minijs.sh``.  Include the following script a
 
 .. code:: sh
 
-	#!/bin/sh
+		#!/bin/sh
 
-	# Modify YUI_PATH with the path to the yuicompressor jar file
-	YUI_PATH="path/to/yuicompressor-2.4.8.jar"
+		# Modify YUI_PATH with the path to the yuicompressor jar file
+		YUI_PATH="path/to/yuicompressor-2.4.8.jar"
 
-	if [ $# -eq 0 ]; then
-	  echo "Please include the file path(s) for the file(s) that you would like to compress." 1>&2
-	  exit 1
-	fi
+		if [ $# -eq 0 ]; then
+		  echo "Please include the file path(s) for the file(s) that you would like to compress." 1>&2
+		  exit 1
+		fi
 
-	for file in "$@";
-	do
-	if [ -f "$file" ]; then
-	      java -jar "$YUI_PATH" -o "${file%%.*}-min.js" "$file"
-	      if (( $? )); then
-	          echo "$file was not able to be minified"
-	          exit 1
-	      else
-	          echo "$file was minified to ${file%%.*}-min.js"
-	      fi
-	  else
-	      echo "Unable to find the javascript file '$file'."
-	fi
-	done;
-	exit 0
+		for file in "$@";
+		do
+		if [ -f "$file" ]; then
+		      java -jar "$YUI_PATH" -o "${file%%.*}-min.js" "$file"
+		      if (( $? )); then
+		          echo "$file was not able to be minified"
+		          exit 1
+		      else
+		          echo "$file was minified to ${file%%.*}-min.js"
+		      fi
+		  else
+		      echo "Unable to find the javascript file '$file'."
+		fi
+		done;
+		exit 0
 
 The script confirms that the filepath argument is a file, then minifies and obfuscates the JavaScript in the file.  It will work with more than one file if you pass multiple files to it in your command.  The minified version is renamed to ``<originalname>-min.js`` and saved to the same directory as the original JavaScript file.
 
