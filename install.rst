@@ -46,7 +46,7 @@ Move the entire Glue directory into your Sublime Text Packages directory.
 Confirm Your PATH
 ------------------
 
-Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help (frequently the case for Mac OSX users because of an issue with the assignment that takes place in this version of Sublime Text).  Never fear.  It is incredibly simple to correct this issue.
+Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help (generally the case for Mac OSX users because of an issue with the assignment that takes place in this version of Sublime Text).  Never fear.  It is incredibly simple to correct this issue.
 
 Confirm that the correct string is being used by launching Glue (use one of the approaches below) and entering the command:
 
