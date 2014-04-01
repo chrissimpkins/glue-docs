@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Install Glue &mdash; Glue 0.9.0 documentation</title>
+  <title>Install Glue &mdash; Glue 0.9.1 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.9.0',
+        VERSION:'0.9.1',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Glue 0.9.0 documentation" href="index.html"/>
+    <link rel="top" title="Glue 0.9.1 documentation" href="index.html"/>
         <link rel="next" title="Navigation" href="navigation.html"/>
         <link rel="prev" title="Glue" href="index.html"/> 
 
@@ -74,7 +74,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-with-git">Install with Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#manual-install">Manual Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#set-your-path">Set Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#confirm-your-path">Confirm Your PATH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#set-your-ps1">Set Your PS1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-started">Get Started</a></li>
 </ul>
@@ -104,6 +104,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-your-shell">Glue and Your Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">Issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="issues.html#bugs">Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#source-contributions">Source Contributions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
@@ -167,21 +175,32 @@
 <p>Open your Sublime Text Packages directory using the <tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Browse</span> <span class="pre">Packages</span></tt> menu items.</p>
 <p>Move the entire Glue directory into your Sublime Text Packages directory.</p>
 </div>
-<div class="section" id="set-your-path">
-<h2>Set Your PATH<a class="headerlink" href="#set-your-path" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="confirm-your-path">
+<h2>Confirm Your PATH<a class="headerlink" href="#confirm-your-path" title="Permalink to this headline">¶</a></h2>
+<p>Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help (frequently the case for Mac OSX users because of an issue with the assignment that takes place in this version of Sublime Text).  Never fear.  It is incredibly simple to correct this issue.</p>
+<p>Confirm that the correct string is being used by launching Glue (use one of the approaches below) and entering the command:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>glue path
+</pre></div>
+</div>
+<p>in the text input box at the bottom of your editor.  This displays the default PATH that Glue uses to identify your executable files.  If the PATH is incorrect, or if you simply want to modify your PATH in Glue, follow the instructions below.</p>
+<div class="section" id="change-your-path-settings">
+<h3>Change Your PATH Settings<a class="headerlink" href="#change-your-path-settings" title="Permalink to this headline">¶</a></h3>
 <p>Open the Glue user settings file by using the Sublime Text menus to navigate to <tt class="docutils literal"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">&gt;</span> <span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt>.  Include the following line in your JSON settings:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;glue_userpath&quot;</span> <span class="p">:</span> <span class="s">&quot;&lt;YOUR PATH&gt;&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  You can use the default settings as a reference:</p>
+<p>Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  Linux/Unix (including Mac OSX) users can find this by entering <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$SHELL</span></tt> in the terminal.</p>
+<p>Here is an example of an appropriate PATH setting for Unix/Linux users:</p>
+<p><strong>Unix/Linux</strong></p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;glue_userpath&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$PATH</span></tt> in your terminal.  Windows users can enter the command <tt class="docutils literal"><span class="pre">ECHO</span> <span class="pre">%PATH%</span></tt> in cmd.exe.  Windows users should escape the backward slash characters in their PATH string like this:</p>
+<p>Windows users can enter the command <tt class="docutils literal"><span class="pre">ECHO</span> <span class="pre">%PATH%</span></tt> in cmd.exe to view their PATH string.  Enter this in the Glue settings file and escape the backward slash characters in the PATH string like this:</p>
+<p><strong>Windows</strong></p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;glue_userpath&quot;</span><span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Windows</span><span class="se">\\</span><span class="s">system32;C:</span><span class="se">\\</span><span class="s">Windows;C:</span><span class="se">\\</span><span class="s">Windows</span><span class="se">\\</span><span class="s">System32</span><span class="se">\\</span><span class="s">Wbem;&quot;</span>
 <span class="p">}</span>
@@ -191,6 +210,7 @@
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Use the <tt class="docutils literal"><span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt> settings file rather than the default file.  The default settings are overwritten on Glue updates!</p>
+</div>
 </div>
 </div>
 <div class="section" id="set-your-ps1">

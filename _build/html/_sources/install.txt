@@ -43,9 +43,21 @@ Open your Sublime Text Packages directory using the ``Preferences -> Browse Pack
 Move the entire Glue directory into your Sublime Text Packages directory.
 
 
-Set Your PATH
-----------------
+Confirm Your PATH
+------------------
 
+Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help (frequently the case for Mac OSX users because of an issue with the assignment that takes place in this version of Sublime Text).  Never fear.  It is incredibly simple to correct this issue.
+
+Confirm that the correct string is being used by launching Glue (use one of the approaches below) and entering the command:
+
+.. code:: bash
+
+	glue path
+
+in the text input box at the bottom of your editor.  This displays the default PATH that Glue uses to identify your executable files.  If the PATH is incorrect, or if you simply want to modify your PATH in Glue, follow the instructions below.
+
+Change Your PATH Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Open the Glue user settings file by using the Sublime Text menus to navigate to ``Preferences > Glue > Glue Settings - User``.  Include the following line in your JSON settings:
 
 .. code:: json
@@ -54,7 +66,11 @@ Open the Glue user settings file by using the Sublime Text menus to navigate to 
 		"glue_userpath" : "<YOUR PATH>"
 	}
 
-Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  You can use the default settings as a reference:
+Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  Linux/Unix (including Mac OSX) users can find this by entering ``echo $SHELL`` in the terminal.
+
+Here is an example of an appropriate PATH setting for Unix/Linux users:
+
+**Unix/Linux**
 
 .. code:: json
 
@@ -62,7 +78,10 @@ Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) 
 		"glue_userpath" : "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 	}
 
-To find your own PATH variable settings, Linux/Unix (including Mac OSX) users can enter the command ``echo $PATH`` in your terminal.  Windows users can enter the command ``ECHO %PATH%`` in cmd.exe.  Windows users should escape the backward slash characters in their PATH string like this:
+
+Windows users can enter the command ``ECHO %PATH%`` in cmd.exe to view their PATH string.  Enter this in the Glue settings file and escape the backward slash characters in the PATH string like this:
+
+**Windows**
 
 .. code:: json
 
