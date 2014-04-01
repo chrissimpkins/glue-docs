@@ -79,6 +79,8 @@ Here is an example of an appropriate PATH setting for Unix/Linux users:
 	}
 
 
+Save the file and restart Sublime Text.
+
 Windows users can enter the command ``ECHO %PATH%`` in cmd.exe to view their PATH string.  Enter this in the Glue settings file and escape the backward slash characters in the PATH string like this:
 
 **Windows**
@@ -89,11 +91,27 @@ Windows users can enter the command ``ECHO %PATH%`` in cmd.exe to view their PAT
 		"glue_userpath": "C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;"
 	}
 
+Save the file and restart Sublime Text.
+
 Glue respects your assignment of directory priority in the standard left to right sequence as it attempts to locate system executables for the commands that you submit.  If you find that a different version of an executable is being launched, or that installed applications are not being located, please confirm your PATH string in the Glue settings.
 
 .. note::
 
 	Use the ``Glue Settings - User`` settings file rather than the default file.  The default settings are overwritten on Glue updates!
+
+Set Your Default Shell
+-------------------------
+You have the option to assign your default shell in the ``glue_shellpath`` setting.  Open the ``Glue Settings - User`` JSON file and add a new line to it that includes the setting key with the value set to the path to your desired shell.
+
+Here's an example that demonstrates how to change the default shell to zsh on Unix/Linux boxes:
+
+.. code:: json
+
+	{
+		"glue_shellpath": "/usr/local/bin/zsh"
+	}
+
+Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment ``$SHELL`` (Unix/Linux) or ``%SHELL%`` (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.
 
 Set Your PS1
 -------------

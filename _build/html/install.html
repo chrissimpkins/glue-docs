@@ -75,6 +75,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#install-with-git">Install with Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#manual-install">Manual Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#confirm-your-path">Confirm Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-your-default-shell">Set Your Default Shell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#set-your-ps1">Set Your PS1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-started">Get Started</a></li>
 </ul>
@@ -199,6 +200,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Save the file and restart Sublime Text.</p>
 <p>Windows users can enter the command <tt class="docutils literal"><span class="pre">ECHO</span> <span class="pre">%PATH%</span></tt> in cmd.exe to view their PATH string.  Enter this in the Glue settings file and escape the backward slash characters in the PATH string like this:</p>
 <p><strong>Windows</strong></p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
@@ -206,12 +208,24 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Save the file and restart Sublime Text.</p>
 <p>Glue respects your assignment of directory priority in the standard left to right sequence as it attempts to locate system executables for the commands that you submit.  If you find that a different version of an executable is being launched, or that installed applications are not being located, please confirm your PATH string in the Glue settings.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Use the <tt class="docutils literal"><span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt> settings file rather than the default file.  The default settings are overwritten on Glue updates!</p>
 </div>
 </div>
+</div>
+<div class="section" id="set-your-default-shell">
+<h2>Set Your Default Shell<a class="headerlink" href="#set-your-default-shell" title="Permalink to this headline">¶</a></h2>
+<p>You have the option to assign your default shell in the <tt class="docutils literal"><span class="pre">glue_shellpath</span></tt> setting.  Open the <tt class="docutils literal"><span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt> JSON file and add a new line to it that includes the setting key with the value set to the path to your desired shell.</p>
+<p>Here&#8217;s an example that demonstrates how to change the default shell to zsh on Unix/Linux boxes:</p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;glue_shellpath&quot;</span><span class="p">:</span> <span class="s">&quot;/usr/local/bin/zsh&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment <tt class="docutils literal"><span class="pre">$SHELL</span></tt> (Unix/Linux) or <tt class="docutils literal"><span class="pre">%SHELL%</span></tt> (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.</p>
 </div>
 <div class="section" id="set-your-ps1">
 <h2>Set Your PS1<a class="headerlink" href="#set-your-ps1" title="Permalink to this headline">¶</a></h2>
