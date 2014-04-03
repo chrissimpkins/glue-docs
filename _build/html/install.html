@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Install Glue &mdash; Glue 0.9.1 documentation</title>
+  <title>Install Glue &mdash; Glue 0.9.2 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.9.1',
+        VERSION:'0.9.2',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Glue 0.9.1 documentation" href="index.html"/>
+    <link rel="top" title="Glue 0.9.2 documentation" href="index.html"/>
         <link rel="next" title="Navigation" href="navigation.html"/>
         <link rel="prev" title="Glue" href="index.html"/> 
 
@@ -225,7 +225,11 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment <tt class="docutils literal"><span class="pre">$SHELL</span></tt> (Unix/Linux) or <tt class="docutils literal"><span class="pre">%SHELL%</span></tt> (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.</p>
+<p>Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment <tt class="docutils literal"><span class="pre">$SHELL</span></tt> (Unix/Linux) or <tt class="docutils literal"><span class="pre">%SHELL%</span></tt> (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn&#8217;t exist):</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ boguscmd
+zsh:1: command not found: boguscmd
+</pre></div>
+</div>
 </div>
 <div class="section" id="set-your-ps1">
 <h2>Set Your PS1<a class="headerlink" href="#set-your-ps1" title="Permalink to this headline">¶</a></h2>

@@ -111,7 +111,12 @@ Here's an example that demonstrates how to change the default shell to zsh on Un
 		"glue_shellpath": "/usr/local/bin/zsh"
 	}
 
-Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment ``$SHELL`` (Unix/Linux) or ``%SHELL%`` (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.
+Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment ``$SHELL`` (Unix/Linux) or ``%SHELL%`` (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn't exist):
+
+.. code::
+
+	█ boguscmd
+	zsh:1: command not found: boguscmd
 
 Set Your PS1
 -------------
