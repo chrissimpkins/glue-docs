@@ -105,10 +105,22 @@ You have the option to assign your default shell in the ``glue_shellpath`` setti
 
 Here's an example that demonstrates how to change the default shell to zsh on Unix/Linux boxes:
 
+**Unix/Linux**
+
 .. code:: json
 
 	{
 		"glue_shellpath": "/usr/local/bin/zsh"
+	}
+
+and to Powershell for Windows users:
+
+**Windows**
+
+.. code:: json
+
+	{
+		"glue_shellpath": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
 	}
 
 Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment ``$SHELL`` (Unix/Linux) or ``%SHELL%`` (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn't exist):

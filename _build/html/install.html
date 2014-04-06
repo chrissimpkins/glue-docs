@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Install Glue &mdash; Glue 0.9.2 documentation</title>
+  <title>Install Glue &mdash; Glue 0.9.3 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.9.2',
+        VERSION:'0.9.3',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,8 +43,8 @@
   
 
   
-    <link rel="top" title="Glue 0.9.2 documentation" href="index.html"/>
-        <link rel="next" title="Navigation" href="navigation.html"/>
+    <link rel="top" title="Glue 0.9.3 documentation" href="index.html"/>
+        <link rel="next" title="Commands" href="commands.html"/>
         <link rel="prev" title="Glue" href="index.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -78,6 +78,23 @@
 <li class="toctree-l2"><a class="reference internal" href="#set-your-default-shell">Set Your Default Shell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#set-your-ps1">Set Your PS1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#table-of-commands">Table of Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#command-usage">Command Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#cd">⊙ <tt class="docutils literal"><span class="pre">cd</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#exit">⊙ <tt class="docutils literal"><span class="pre">exit</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-browse">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-clear">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">clear</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-finder">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-help">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-localhost">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-new">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-open">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-path">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">path</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-user">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">user</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-wco">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
@@ -220,8 +237,16 @@
 <h2>Set Your Default Shell<a class="headerlink" href="#set-your-default-shell" title="Permalink to this headline">¶</a></h2>
 <p>You have the option to assign your default shell in the <tt class="docutils literal"><span class="pre">glue_shellpath</span></tt> setting.  Open the <tt class="docutils literal"><span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt> JSON file and add a new line to it that includes the setting key with the value set to the path to your desired shell.</p>
 <p>Here&#8217;s an example that demonstrates how to change the default shell to zsh on Unix/Linux boxes:</p>
+<p><strong>Unix/Linux</strong></p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;glue_shellpath&quot;</span><span class="p">:</span> <span class="s">&quot;/usr/local/bin/zsh&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and to Powershell for Windows users:</p>
+<p><strong>Windows</strong></p>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;glue_shellpath&quot;</span><span class="p">:</span> <span class="s">&quot;C:</span><span class="se">\\</span><span class="s">Windows</span><span class="se">\\</span><span class="s">system32</span><span class="se">\\</span><span class="s">WindowsPowerShell</span><span class="se">\\</span><span class="s">v1.0</span><span class="se">\\</span><span class="s">powershell.exe&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -264,7 +289,7 @@ zsh:1: command not found: boguscmd
   
     <div class="rst-footer-buttons">
       
-        <a href="navigation.html" class="btn btn-neutral float-right" title="Navigation"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="commands.html" class="btn btn-neutral float-right" title="Commands"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Glue"><span class="icon icon-circle-arrow-left"></span> Previous</a>

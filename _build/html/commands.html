@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Commands &mdash; Glue 0.9.3 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.9.3',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Glue 0.9.3 documentation" href="index.html"/>
+        <link rel="next" title="Navigation" href="navigation.html"/>
+        <link rel="prev" title="Install Glue" href="install.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Glue</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-sublime-package-control">Install with Sublime Package Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-with-git">Install with Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#manual-install">Manual Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#confirm-your-path">Confirm Your PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-default-shell">Set Your Default Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#set-your-ps1">Set Your PS1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#get-started">Get Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-commands">Table of Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-usage">Command Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cd">⊙ <tt class="docutils literal"><span class="pre">cd</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exit">⊙ <tt class="docutils literal"><span class="pre">exit</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-browse">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-clear">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">clear</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-finder">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-help">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-localhost">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-new">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-open">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-path">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">path</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-user">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">user</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-wco">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#change-directories-with-cd">Change Directories with CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-working-directory">The Working Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="file-management.html">File Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-path">Open Files by Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#open-files-by-wildcard">Open Files by Wildcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#create-a-new-file">Create a New File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-management.html#file-management-with-system-utilities">File Management with System Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extend-glue.html">Extend Glue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-the-glue-commands-directory">Create the Glue-Commands Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#create-a-glue-json-file">Create a glue.json File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#define-your-command-extensions">Define Your Command Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#use-your-extensions">Use Your Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#system-utility-example">System Utility Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#launch-url-in-default-browser-example">Launch URL in Default Browser Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#multiple-application-version-example">Multiple Application Version Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extend-glue.html#shell-script-example">Shell Script Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#glue-and-your-shell">Glue and Your Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">Issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="issues.html#bugs">Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#source-contributions">Source Contributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#glue-plugin-license">Glue Plugin License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#glue-documentation-license">Glue Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Glue</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Commands</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="table-of-commands">
+<h2>Table of Commands<a class="headerlink" href="#table-of-commands" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">cd</span></tt></td>
+<td>change working directory</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">exit</span></tt></td>
+<td>exit Glue</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt></td>
+<td>open URL or local project file in default browser</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">clear</span></tt></td>
+<td>clear the text in the Glue view</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt></td>
+<td>reveal current directory (default) or optional path in finder</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></td>
+<td>open the Glue help in the Glue view</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></td>
+<td>open webbrowser to local server (default port 8000)</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></td>
+<td>open a new Sublime Text buffer</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt></td>
+<td>open one or more project files by filepath</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">path</span></tt></td>
+<td>display the system PATH setting that is used by Glue</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">user</span></tt></td>
+<td>display an alphabetized list of Glue user extensions</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt></td>
+<td>open one or more project files by wildcard pattern</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="command-usage">
+<h2>Command Usage<a class="headerlink" href="#command-usage" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cd">
+<h2>⊙ <tt class="docutils literal"><span class="pre">cd</span></tt><a class="headerlink" href="#cd" title="Permalink to this headline">¶</a></h2>
+<p>Change the working directory.  Directory state is maintained between calls to the shell until you submit the command <tt class="docutils literal"><span class="pre">exit</span></tt>.  This works on Unix, Linux, and Windows platforms.</p>
+<p><strong>Usage</strong></p>
+<p>Navigate to user assigned directory:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ cd &lt;directory path&gt;
+</pre></div>
+</div>
+<p>Idiom for navigation to parent directory:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ cd ..
+</pre></div>
+</div>
+</div>
+<div class="section" id="exit">
+<h2>⊙ <tt class="docutils literal"><span class="pre">exit</span></tt><a class="headerlink" href="#exit" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">exit</span></tt> command performs cleanup tasks and exits the Glue terminal.  The view is not automatically closed.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ exit
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-browse">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt><a class="headerlink" href="#glue-browse" title="Permalink to this headline">¶</a></h2>
+<p>Open a URL <tt class="docutils literal"><span class="pre">&lt;url&gt;</span></tt> or a local project filepath <tt class="docutils literal"><span class="pre">&lt;path&gt;</span></tt> in the default web browser.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue browse &lt;url, path&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-clear">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">clear</span></tt><a class="headerlink" href="#glue-clear" title="Permalink to this headline">¶</a></h2>
+<p>Clear the text in the Glue view.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue clear
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-finder">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt><a class="headerlink" href="#glue-finder" title="Permalink to this headline">¶</a></h2>
+<p>Reveal the current working directory or optional directory path in the finder</p>
+<p><strong>Usage</strong></p>
+<p>Reveal current working directory in finder:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue finder
+</pre></div>
+</div>
+<p>Reveal <tt class="docutils literal"><span class="pre">subdirectory</span></tt> path in finder:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue finder [subdirectory]
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-help">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt><a class="headerlink" href="#glue-help" title="Permalink to this headline">¶</a></h2>
+<p>Open the Glue help in the Glue view.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue help
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-localhost">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt><a class="headerlink" href="#glue-localhost" title="Permalink to this headline">¶</a></h2>
+<p>Open the default web browser to the local server at the URL <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> by default.  You have the option to assign the port in your command.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue localhost [port]
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-new">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt><a class="headerlink" href="#glue-new" title="Permalink to this headline">¶</a></h2>
+<p>Open a new Sublime Text buffer in the editor.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue new
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-open">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt><a class="headerlink" href="#glue-open" title="Permalink to this headline">¶</a></h2>
+<p>Open one or more files in the Sublime Text editor by filepath.</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue open &lt;filepath&gt; [, filepath]
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-path">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">path</span></tt><a class="headerlink" href="#glue-path" title="Permalink to this headline">¶</a></h2>
+<p>Display the system PATH that is used by Glue</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue path
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-user">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">user</span></tt><a class="headerlink" href="#glue-user" title="Permalink to this headline">¶</a></h2>
+<p>Display an alphabetized list of your Glue user extensions</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue user
+</pre></div>
+</div>
+</div>
+<div class="section" id="glue-wco">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt><a class="headerlink" href="#glue-wco" title="Permalink to this headline">¶</a></h2>
+<p>Open one or more files in the Sublime Text editor by wildcard pattern</p>
+<p><strong>Usage</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue wco &lt;pattern&gt;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="navigation.html" class="btn btn-neutral float-right" title="Navigation"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="Install Glue"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

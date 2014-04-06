@@ -154,7 +154,7 @@ More detailed extension documentation (including additional examples) is `availa
 Limitations
 -------------
 
-✱ Glue communicates with your existing shell and there is no persistence of the data stream after your command is executed.  See the `limitations`_ that result from this application structure.
+✱ Glue is a non-interactive interface to your system shell.  See the `limitations`_ that result from this application structure.
 
 Contents
 ----------
@@ -163,6 +163,7 @@ Contents
    :maxdepth: 2
 
    install
+   commands
    navigation
    file-management
    extend-glue
