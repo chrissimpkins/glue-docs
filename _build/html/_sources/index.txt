@@ -170,6 +170,7 @@ Contents
    limitations
    issues
    contribute
+   changelog
    license
 
 .. _limitations: limitations.html
