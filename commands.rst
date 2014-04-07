@@ -32,15 +32,15 @@ Change the working directory.  Directory state is maintained between calls to th
 
 Navigate to user assigned directory:
 
-.. code:: bash
+.. code::
 
-	$ cd <directory path>
+	cd <directory path>
 
 Idiom for navigation to parent directory:
 
-.. code:: bash
+.. code::
 
-	$ cd ..
+	cd ..
 
 
 ⊙ ``exit``
@@ -49,9 +49,9 @@ The ``exit`` command performs cleanup tasks and exits the Glue terminal.  The vi
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ exit
+	exit
 
 
 ⊙ ``glue browse``
@@ -60,9 +60,9 @@ Open a URL ``<url>`` or a local project filepath ``<path>`` in the default web b
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue browse <url, path>
+	glue browse <url, path>
 
 
 ⊙ ``glue clear``
@@ -71,9 +71,9 @@ Clear the text in the Glue view.
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue clear
+	glue clear
 
 
 ⊙ ``glue finder``
@@ -84,15 +84,15 @@ Reveal the current working directory or optional directory path in the finder
 
 Reveal current working directory in finder:
 
-.. code:: bash
+.. code::
 
-	$ glue finder
+	glue finder
 
 Reveal ``subdirectory`` path in finder:
 
-.. code:: bash
+.. code::
 
-	$ glue finder [subdirectory]
+	glue finder [subdirectory]
 
 
 ⊙ ``glue help``
@@ -101,9 +101,9 @@ Open the Glue help in the Glue view.
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue help
+	glue help
 
 
 ⊙ ``glue localhost``
@@ -112,9 +112,9 @@ Open the default web browser to the local server at the URL http://localhost:800
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue localhost [port]
+	glue localhost [port]
 
 
 ⊙ ``glue new``
@@ -123,9 +123,9 @@ Open a new Sublime Text buffer in the editor.
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue new
+	glue new
 
 
 ⊙ ``glue open``
@@ -134,9 +134,9 @@ Open one or more files in the Sublime Text editor by filepath.
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue open <filepath> [, filepath]
+	glue open <filepath> [, filepath]
 
 
 ⊙ ``glue path``
@@ -145,9 +145,9 @@ Display the system PATH that is used by Glue
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue path
+	glue path
 
 
 ⊙ ``glue user``
@@ -156,9 +156,9 @@ Display an alphabetized list of your Glue user extensions
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue user
+	glue user
 
 
 ⊙ ``glue wco``
@@ -167,8 +167,8 @@ Open one or more files in the Sublime Text editor by wildcard pattern
 
 **Usage**
 
-.. code:: bash
+.. code::
 
-	$ glue wco <pattern>
+	glue wco <pattern>
 
 
