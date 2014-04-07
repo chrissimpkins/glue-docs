@@ -80,19 +80,19 @@ Open files in the Sublime Text editor by file path:
 
 .. code::
 
-	█ glue open <filepath> [filepath2] [...]
+    █ glue open <filepath> [filepath2] [...]
 
 or by wildcard pattern:
 
 .. code::
 
-	█ glue wco <wildcard>
+    █ glue wco <wildcard>
 
 And create new files with:
 
 .. code::
 
-   █ glue new
+    █ glue new
 
 
 Extend Sublime Text With Glue Extensions
@@ -101,7 +101,7 @@ You can build Sublime Text extensions **with your favorite language** or extend 
 
 .. code::
 
-	█ glue <your-command> [optional arguments]
+    █ glue <your-command> [optional arguments]
 
 You have the option to pass additional command line arguments, clipboard data, or the current working directory path to the mapped system command with `template tags`_.
 
@@ -132,13 +132,13 @@ Then use it in Glue like this:
 
 .. code::
 
-	█ glue crunch image.png
+    █ glue crunch image.png
 
 The mapped system command is executed as:
 
 .. code::
 
-   /Users/me/scripts/cruncher.sh image.png
+    /Users/me/scripts/cruncher.sh image.png
 
 in your current working directory and is accessible in any Sublime Text project.
 
@@ -146,7 +146,7 @@ Make as many as you'd like.  You can use the following command to reference an a
 
 .. code::
 
-   █ glue user
+    █ glue user
 
 More detailed extension documentation (including additional examples) is `available here`_.
 
