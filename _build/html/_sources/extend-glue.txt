@@ -45,6 +45,10 @@ Template Tag          Definition
 
 These extensions are immediately available when you save the ``glue.json`` file.
 
+.. note::
+
+	Windows users should include single quotes around the ``{{pwd}}`` tag in the ``glue.json`` file.  Failure to do so will result in missing directory path separators in the path string that is replaced at the site of your template tag.  See `this issue report in the GitHub repository <https://github.com/chrissimpkins/glue/issues/1>`_ for more details.
+
 Use Your Extensions
 ---------------------
 
