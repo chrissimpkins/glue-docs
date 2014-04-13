@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Commands &mdash; Glue 0.9.3 documentation</title>
+  <title>Commands &mdash; Glue 0.9.4 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.9.3',
+        VERSION:'0.9.4',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Glue 0.9.3 documentation" href="index.html"/>
+    <link rel="top" title="Glue 0.9.4 documentation" href="index.html"/>
         <link rel="next" title="Navigation" href="navigation.html"/>
         <link rel="prev" title="Install Glue" href="install.html"/> 
 
@@ -88,6 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#glue-browse">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#glue-clear">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">clear</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#glue-finder">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glue-goto">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">goto</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#glue-help">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#glue-localhost">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#glue-new">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></a></li>
@@ -195,25 +196,28 @@
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt></td>
 <td>reveal current directory (default) or optional path in finder</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">goto</span></tt></td>
+<td>Sublime Text Goto Anything search</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></td>
 <td>open the Glue help in the Glue view</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></td>
 <td>open webbrowser to local server (default port 8000)</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></td>
 <td>open a new Sublime Text buffer</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">open</span></tt></td>
 <td>open one or more project files by filepath</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">path</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">path</span></tt></td>
 <td>display the system PATH setting that is used by Glue</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">user</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">user</span></tt></td>
 <td>display an alphabetized list of Glue user extensions</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">glue</span> <span class="pre">wco</span></tt></td>
 <td>open one or more project files by wildcard pattern</td>
 </tr>
 </tbody>
@@ -270,6 +274,19 @@
 <p>Reveal <tt class="docutils literal"><span class="pre">subdirectory</span></tt> path in finder:</p>
 <div class="code shell-session highlight-python"><div class="highlight"><pre>█ glue finder [subdirectory]
 </pre></div>
+</div>
+</div>
+<div class="section" id="glue-goto">
+<h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">goto</span></tt><a class="headerlink" href="#glue-goto" title="Permalink to this headline">¶</a></h2>
+<p>Launch the Sublime Text Goto Anything search feature with the query term, <tt class="docutils literal"><span class="pre">&lt;query&gt;</span></tt></p>
+<p><strong>Usage</strong></p>
+<div class="code shell-session highlight-python"><div class="highlight"><pre>█ glue goto &lt;query&gt;
+</pre></div>
+</div>
+<p>This works best if you use a part of a project filename or directory and submit the Glue command.  You will receive a list of matching files and can add additional symbols to jump to locations within the desired file.  Add the <tt class="docutils literal"><span class="pre">&#64;</span></tt> character and additional text to your query to jump to symbols in the file.  Add the <tt class="docutils literal"><span class="pre">#</span></tt> character and additional text to the query to search within the file.  And add the <tt class="docutils literal"><span class="pre">:</span></tt> character followed by a numeral to jump to a line number in the file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sublime Text does not permit the searches within files using <tt class="docutils literal"><span class="pre">&#64;</span></tt>, <tt class="docutils literal"><span class="pre">#</span></tt>, or <tt class="docutils literal"><span class="pre">:</span></tt> to be performed with this Glue command.  Add these search filters to your query once you identify the proper file in the list produced by the Goto Anything file match.</p>
 </div>
 </div>
 <div class="section" id="glue-help">

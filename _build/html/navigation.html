@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Navigation &mdash; Glue 0.9.3 documentation</title>
+  <title>Navigation &mdash; Glue 0.9.4 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.9.3',
+        VERSION:'0.9.4',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Glue 0.9.3 documentation" href="index.html"/>
+    <link rel="top" title="Glue 0.9.4 documentation" href="index.html"/>
         <link rel="next" title="File Management" href="file-management.html"/>
         <link rel="prev" title="Commands" href="commands.html"/> 
 
@@ -88,6 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="commands.html#glue-browse">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">browse</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html#glue-clear">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">clear</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html#glue-finder">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">finder</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#glue-goto">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">goto</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html#glue-help">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">help</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html#glue-localhost">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">localhost</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html#glue-new">⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">new</span></tt></a></li>
@@ -175,6 +176,10 @@
 </div>
 <p>To navigate to a parent directory, use the following idiom:</p>
 <div class="code highlight-python"><div class="highlight"><pre>█ cd ..
+</pre></div>
+</div>
+<p>And to navigate to your user home directory (platform dependent), use this idiom:</p>
+<div class="code highlight-python"><div class="highlight"><pre>█ cd ~
 </pre></div>
 </div>
 <p>Glue maintains the state of your working directory between command runs <em>while you keep the Glue view open</em>.  When you close the Glue view or use the <tt class="docutils literal"><span class="pre">exit</span></tt> command, this information is discarded and you start fresh the next time that you open Glue.</p>

@@ -12,6 +12,7 @@ Table of Commands
 ``glue browse``    		open URL or local project file in default browser
 ``glue clear``          clear the text in the Glue view
 ``glue finder``         reveal current directory (default) or optional path in finder
+``glue goto``           Sublime Text Goto Anything search
 ``glue help``			open the Glue help in the Glue view
 ``glue localhost``      open webbrowser to local server (default port 8000)
 ``glue new``			open a new Sublime Text buffer
@@ -93,6 +94,23 @@ Reveal ``subdirectory`` path in finder:
 .. code:: shell-session
 
     █ glue finder [subdirectory]
+
+
+⊙ ``glue goto``
+-------------------
+Launch the Sublime Text Goto Anything search feature with the query term, ``<file query>``
+
+**Usage**
+
+.. code:: shell-session
+
+    █ glue goto <file query>
+
+This works best if you use a part of a project filename or directory and submit the Glue command.  You will receive a list of matching files and can add additional symbols to jump to locations within the desired file.  Add the ``@`` character and additional text to your query to jump to symbols in the file.  Add the ``#`` character and additional text to the query to search within the file.  And add the ``:`` character followed by a numeral to jump to a line number in the file.
+
+.. note::
+
+    Sublime Text does not permit the searches within files using ``@``, ``#``, or ``:`` to be performed with this Glue command.  Add these search filters to your query once you identify the proper file in the list produced by the Goto Anything file match.
 
 
 ⊙ ``glue help``

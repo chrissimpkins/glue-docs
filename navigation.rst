@@ -15,6 +15,12 @@ To navigate to a parent directory, use the following idiom:
 
  	█ cd ..
 
+And to navigate to your user home directory (platform dependent), use this idiom:
+
+.. code::
+
+ 	█ cd ~
+
 Glue maintains the state of your working directory between command runs *while you keep the Glue view open*.  When you close the Glue view or use the ``exit`` command, this information is discarded and you start fresh the next time that you open Glue.
 
 The Working Directory
