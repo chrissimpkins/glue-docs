@@ -27,21 +27,27 @@ Command Usage
 
 ⊙ ``cd``
 ---------
-Change the working directory.  Directory state is maintained between calls to the shell until you submit the command ``exit``.  This works on Unix, Linux, and Windows platforms.
+Change the working directory.  Directory state is maintained between calls to the shell until you submit the command ``exit``.  This command works on Unix, Linux, and Windows platforms.
 
 **Usage**
 
-Navigate to user assigned directory:
+**Navigate to user assigned directory**:
 
 .. code:: shell-session
 
     █ cd <directory path>
 
-Idiom for navigation to parent directory:
+**Idiom for navigation to parent directory**:
 
 .. code:: shell-session
 
     █ cd ..
+
+**Idiom for navigation to your platform-dependent user home directory**:
+
+.. code:: shell-session
+
+    █ cd ~
 
 
 ⊙ ``exit``

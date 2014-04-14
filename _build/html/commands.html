@@ -228,14 +228,18 @@
 </div>
 <div class="section" id="cd">
 <h2>⊙ <tt class="docutils literal"><span class="pre">cd</span></tt><a class="headerlink" href="#cd" title="Permalink to this headline">¶</a></h2>
-<p>Change the working directory.  Directory state is maintained between calls to the shell until you submit the command <tt class="docutils literal"><span class="pre">exit</span></tt>.  This works on Unix, Linux, and Windows platforms.</p>
+<p>Change the working directory.  Directory state is maintained between calls to the shell until you submit the command <tt class="docutils literal"><span class="pre">exit</span></tt>.  This command works on Unix, Linux, and Windows platforms.</p>
 <p><strong>Usage</strong></p>
-<p>Navigate to user assigned directory:</p>
+<p><strong>Navigate to user assigned directory</strong>:</p>
 <div class="code shell-session highlight-python"><div class="highlight"><pre>█ cd &lt;directory path&gt;
 </pre></div>
 </div>
-<p>Idiom for navigation to parent directory:</p>
+<p><strong>Idiom for navigation to parent directory</strong>:</p>
 <div class="code shell-session highlight-python"><div class="highlight"><pre>█ cd ..
+</pre></div>
+</div>
+<p><strong>Idiom for navigation to your platform-dependent user home directory</strong>:</p>
+<div class="code shell-session highlight-python"><div class="highlight"><pre>█ cd ~
 </pre></div>
 </div>
 </div>
@@ -278,9 +282,9 @@
 </div>
 <div class="section" id="glue-goto">
 <h2>⊙ <tt class="docutils literal"><span class="pre">glue</span> <span class="pre">goto</span></tt><a class="headerlink" href="#glue-goto" title="Permalink to this headline">¶</a></h2>
-<p>Launch the Sublime Text Goto Anything search feature with the query term, <tt class="docutils literal"><span class="pre">&lt;query&gt;</span></tt></p>
+<p>Launch the Sublime Text Goto Anything search feature with the query term, <tt class="docutils literal"><span class="pre">&lt;file</span> <span class="pre">query&gt;</span></tt></p>
 <p><strong>Usage</strong></p>
-<div class="code shell-session highlight-python"><div class="highlight"><pre>█ glue goto &lt;query&gt;
+<div class="code shell-session highlight-python"><div class="highlight"><pre>█ glue goto &lt;file query&gt;
 </pre></div>
 </div>
 <p>This works best if you use a part of a project filename or directory and submit the Glue command.  You will receive a list of matching files and can add additional symbols to jump to locations within the desired file.  Add the <tt class="docutils literal"><span class="pre">&#64;</span></tt> character and additional text to your query to jump to symbols in the file.  Add the <tt class="docutils literal"><span class="pre">#</span></tt> character and additional text to the query to search within the file.  And add the <tt class="docutils literal"><span class="pre">:</span></tt> character followed by a numeral to jump to a line number in the file.</p>

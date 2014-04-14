@@ -27,21 +27,27 @@ Command Usage
 
 ⊙ ``cd``
 ---------
-Change the working directory.  Directory state is maintained between calls to the shell until you submit the command ``exit``.  This works on Unix, Linux, and Windows platforms.
+Change the working directory.  Directory state is maintained between calls to the shell until you submit the command ``exit``.  This command works on Unix, Linux, and Windows platforms.
 
 **Usage**
 
-Navigate to user assigned directory:
+**Navigate to user assigned directory**:
 
 .. code:: shell-session
 
     █ cd <directory path>
 
-Idiom for navigation to parent directory:
+**Idiom for navigation to parent directory**:
 
 .. code:: shell-session
 
     █ cd ..
+
+**Idiom for navigation to your platform-dependent user home directory**:
+
+.. code:: shell-session
+
+    █ cd ~
 
 
 ⊙ ``exit``
@@ -98,13 +104,13 @@ Reveal ``subdirectory`` path in finder:
 
 ⊙ ``glue goto``
 -------------------
-Launch the Sublime Text Goto Anything search feature with the query term, ``<query>``
+Launch the Sublime Text Goto Anything search feature with the query term, ``<file query>``
 
 **Usage**
 
 .. code:: shell-session
 
-    █ glue goto <query>
+    █ glue goto <file query>
 
 This works best if you use a part of a project filename or directory and submit the Glue command.  You will receive a list of matching files and can add additional symbols to jump to locations within the desired file.  Add the ``@`` character and additional text to your query to jump to symbols in the file.  Add the ``#`` character and additional text to the query to search within the file.  And add the ``:`` character followed by a numeral to jump to a line number in the file.
 
