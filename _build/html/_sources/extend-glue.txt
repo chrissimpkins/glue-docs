@@ -1,7 +1,7 @@
 Extend Glue
 =============
 
-Glue allows you to extend the Sublime Text editor with system utilities, your own compiled executables, shell scripts, and source from any scripting language that is supported on your machine.
+Glue allows you to extend the Sublime Text editor with system utilities, your own compiled executables, shell scripts, and source from any interpreted language that is supported on your machine.
 
 This is performed with Glue extensions that function as system command aliases and can be called from the command line with the syntax:
 
