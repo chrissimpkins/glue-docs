@@ -222,22 +222,22 @@
 <div class="section" id="file-management">
 <h2>File Management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h2>
 <p>Open files in the Sublime Text editor by file path:</p>
-<div class="code highlight-python"><div class="highlight"><pre>█ glue open &lt;filepath&gt; [filepath2] [...]
+<div class="code highlight-python"><div class="highlight"><pre>$ glue open &lt;filepath&gt; [filepath2] [...]
 </pre></div>
 </div>
 <p>or by wildcard pattern:</p>
-<div class="code highlight-python"><div class="highlight"><pre>█ glue wco &lt;wildcard&gt;
+<div class="code highlight-python"><div class="highlight"><pre>$ glue wco &lt;wildcard&gt;
 </pre></div>
 </div>
 <p>And create new files with:</p>
-<div class="code highlight-python"><div class="highlight"><pre>█ glue new
+<div class="code highlight-python"><div class="highlight"><pre>$ glue new
 </pre></div>
 </div>
 </div>
 <div class="section" id="extend-sublime-text-with-glue-extensions">
 <h2>Extend Sublime Text With Glue Extensions<a class="headerlink" href="#extend-sublime-text-with-glue-extensions" title="Permalink to this headline">¶</a></h2>
 <p>You can build Sublime Text extensions <strong>with your favorite language</strong> or extend Sublime Text <strong>with any system utility</strong> using Glue command extensions.  These are aliases for system commands that can be called from the Glue command line using the syntax:</p>
-<div class="code highlight-python"><div class="highlight"><pre>█ glue &lt;your-command&gt; [optional arguments]
+<div class="code highlight-python"><div class="highlight"><pre>$ glue &lt;your-command&gt; [optional arguments]
 </pre></div>
 </div>
 <p>You have the option to pass additional command line arguments, clipboard data, or the current working directory path to the mapped system command with <a class="reference external" href="extend-glue.html#define-your-command-extensions">template tags</a>.</p>
@@ -259,7 +259,7 @@
 </pre></div>
 </div>
 <p>Then use it in Glue like this:</p>
-<div class="code highlight-python"><div class="highlight"><pre>█ glue crunch image.png
+<div class="code highlight-python"><div class="highlight"><pre>$ glue crunch image.png
 </pre></div>
 </div>
 <p>The mapped system command is executed as:</p>
@@ -268,7 +268,7 @@
 </div>
 <p>in your current working directory and is accessible in any Sublime Text project.</p>
 <p>Make as many as you&#8217;d like.  You can use the following command to reference an alphabetized list of your extensions:</p>
-<div class="code highlight-python"><div class="highlight"><pre>█ glue user
+<div class="code highlight-python"><div class="highlight"><pre>$ glue user
 </pre></div>
 </div>
 <p>More detailed extension documentation (including additional examples) is <a class="reference external" href="extend-glue.html">available here</a>.</p>

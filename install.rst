@@ -29,7 +29,7 @@ Open your ``Packages`` directory with the Sublime Text menu items ``Preferences 
 
 .. code::
 
-	█ git clone https://github.com/chrissimpkins/glue.git "Glue"
+	$ git clone https://github.com/chrissimpkins/glue.git "Glue"
 
 
 Manual Install
@@ -127,7 +127,7 @@ Save the file and restart Sublime Text. Note that the shell that is executed may
 
 .. code::
 
-	█ boguscmd
+	$ boguscmd
 	zsh:1: command not found: boguscmd
 
 Set Your PS1

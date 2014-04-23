@@ -7,19 +7,19 @@ Glue includes its own version of the ``cd`` command.  Use the following syntax:
 
 .. code::
 
-	█ cd <directory-path>
+	$ cd <directory-path>
 
 To navigate to a parent directory, use the following idiom:
 
 .. code::
 
- 	█ cd ..
+ 	$ cd ..
 
 And to navigate to your user home directory (platform dependent), use this idiom:
 
 .. code::
 
- 	█ cd ~
+ 	$ cd ~
 
 Glue maintains the state of your working directory between command runs *while you keep the Glue view open*.  When you close the Glue view or use the ``exit`` command, this information is discarded and you start fresh the next time that you open Glue.
 

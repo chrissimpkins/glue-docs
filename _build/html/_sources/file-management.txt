@@ -10,13 +10,13 @@ To open files by filepath, use the ``glue open`` sub-command with one or more fi
 
 .. code:: bash
 
-	█ glue open <file> [file]
+	$ glue open <file> [file]
 
 For example, to open the files ``test.txt`` and ``test2.txt`` from the current working directory in the editor, use the following command:
 
 .. code:: bash
 
-	█ glue open test.txt test2.txt
+	$ glue open test.txt test2.txt
 
 
 Open Files by Wildcard
@@ -26,13 +26,13 @@ To open files by wildcard value, use the ``glue wco`` sub-command with a wildcar
 
 .. code:: bash
 
-	█ glue wco <wildcard>
+	$ glue wco <wildcard>
 
 The following example will open all Python ``.py`` files in the sub-directory ``src`` on Unix/Linux systems:
 
 .. code:: bash
 
-	█ glue wco '/src/*.py'
+	$ glue wco '/src/*.py'
 
 
 Create a New File
@@ -42,7 +42,7 @@ Create a new file from the command line with:
 
 .. code:: bash
 
-	█ glue new
+	$ glue new
 
 
 File Management with System Utilities

@@ -170,7 +170,7 @@
 <h1>Extend Glue<a class="headerlink" href="#extend-glue" title="Permalink to this headline">¶</a></h1>
 <p>Glue allows you to extend the Sublime Text editor with system utilities, your own compiled executables, shell scripts, and source from any interpreted language that is supported on your machine.</p>
 <p>This is performed with Glue extensions that function as system command aliases and can be called from the command line with the syntax:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue &lt;your-command&gt; [args]
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue &lt;your-command&gt; [args]
 </pre></div>
 </div>
 <p>They are incredibly simple to develop and require absolutely no programming knowledge (but can be hooked into anything that you develop with the capability to process data from the standard input stream):</p>
@@ -224,7 +224,7 @@
 <div class="section" id="use-your-extensions">
 <h2>Use Your Extensions<a class="headerlink" href="#use-your-extensions" title="Permalink to this headline">¶</a></h2>
 <p>Launch Glue and run your command extension(s) with the following syntax:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue &lt;command-name&gt; [args]
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue &lt;command-name&gt; [args]
 </pre></div>
 </div>
 <p>Your command is executed from your current working directory and data from the standard output stream (and standard error stream for any non-zero exit status codes) are displayed in the Glue view.</p>
@@ -239,7 +239,7 @@
 </pre></div>
 </div>
 <p>Save the file and the command is immediately available for use.  Launch Glue and enter any URL as an argument to your command in order to see the GET response headers for the site in the Glue view:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue head www.supafresh.com
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue head www.supafresh.com
 </pre></div>
 </div>
 </div>
@@ -253,7 +253,7 @@
 </pre></div>
 </div>
 <p>Save the file and then use the command with a URL encoded query like this:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue google sublime+package+control
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue google sublime+package+control
 </pre></div>
 </div>
 </div>
@@ -279,13 +279,13 @@
 </div>
 <p>Confirm the above filepath settings on your own machine.</p>
 <p>Then use the separate versions of Python with the following commands:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue py27 --version
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue py27 --version
 Python 2.7.6
 
-█ glue py33 --version
+$ glue py33 --version
 Python 3.3.5
 
-█ glue py34 --version
+$ glue py34 --version
 Python 3.4.0
 </pre></div>
 </div>
@@ -329,7 +329,7 @@ exit 0
 </pre></div>
 </div>
 <p>Launch Glue in your editor and minify JS files in the working directory with a command like this:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>█ glue minijs awesome.js
+<div class="code bash highlight-python"><div class="highlight"><pre>$ glue minijs awesome.js
 </pre></div>
 </div>
 <p>The minified file is saved as <tt class="docutils literal"><span class="pre">awesome-min.js</span></tt> in the same directory.</p>

@@ -7,7 +7,7 @@ This is performed with Glue extensions that function as system command aliases a
 
 .. code:: bash
 
-	█ glue <your-command> [args]
+	$ glue <your-command> [args]
 
 They are incredibly simple to develop and require absolutely no programming knowledge (but can be hooked into anything that you develop with the capability to process data from the standard input stream):
 
@@ -56,7 +56,7 @@ Launch Glue and run your command extension(s) with the following syntax:
 
 .. code:: bash
 
-	█ glue <command-name> [args]
+	$ glue <command-name> [args]
 
 Your command is executed from your current working directory and data from the standard output stream (and standard error stream for any non-zero exit status codes) are displayed in the Glue view.
 
@@ -77,7 +77,7 @@ Save the file and the command is immediately available for use.  Launch Glue and
 
 .. code:: bash
 
-	█ glue head www.supafresh.com
+	$ glue head www.supafresh.com
 
 
 Launch URL in Default Browser Example
@@ -96,7 +96,7 @@ Save the file and then use the command with a URL encoded query like this:
 
 .. code:: bash
 
-	█ glue google sublime+package+control
+	$ glue google sublime+package+control
 
 
 Multiple Application Version Example
@@ -131,13 +131,13 @@ Then use the separate versions of Python with the following commands:
 
 .. code:: bash
 
-	█ glue py27 --version
+	$ glue py27 --version
 	Python 2.7.6
 
-	█ glue py33 --version
+	$ glue py33 --version
 	Python 3.3.5
 
-	█ glue py34 --version
+	$ glue py34 --version
 	Python 3.4.0
 
 
@@ -190,7 +190,7 @@ Launch Glue in your editor and minify JS files in the working directory with a c
 
 .. code:: bash
 
-	█ glue minijs awesome.js
+	$ glue minijs awesome.js
 
 The minified file is saved as ``awesome-min.js`` in the same directory.
 

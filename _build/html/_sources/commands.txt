@@ -35,19 +35,19 @@ Change the working directory.  Directory state is maintained between calls to th
 
 .. code:: shell-session
 
-    █ cd <directory path>
+    $ cd <directory path>
 
 **Idiom for navigation to parent directory**:
 
 .. code:: shell-session
 
-    █ cd ..
+    $ cd ..
 
 **Idiom for navigation to your platform-dependent user home directory**:
 
 .. code:: shell-session
 
-    █ cd ~
+    $ cd ~
 
 
 ⊙ ``exit``
@@ -58,7 +58,7 @@ The ``exit`` command performs cleanup tasks and exits the Glue terminal.  The vi
 
 .. code:: shell-session
 
-    █ exit
+    $ exit
 
 
 ⊙ ``glue browse``
@@ -69,7 +69,7 @@ Open a URL ``<url>`` or a local project filepath ``<path>`` in the default web b
 
 .. code:: shell-session
 
-    █ glue browse <url, path>
+    $ glue browse <url, path>
 
 
 ⊙ ``glue clear``
@@ -80,7 +80,7 @@ Clear the text in the Glue view.
 
 .. code:: shell-session
 
-    █ glue clear
+    $ glue clear
 
 
 ⊙ ``glue finder``
@@ -93,13 +93,13 @@ Reveal current working directory in finder:
 
 .. code:: shell-session
 
-    █ glue finder
+    $ glue finder
 
 Reveal ``subdirectory`` path in finder:
 
 .. code:: shell-session
 
-    █ glue finder [subdirectory]
+    $ glue finder [subdirectory]
 
 
 ⊙ ``glue goto``
@@ -110,7 +110,7 @@ Launch the Sublime Text Goto Anything search feature with the query term, ``<fil
 
 .. code:: shell-session
 
-    █ glue goto <file query>
+    $ glue goto <file query>
 
 This works best if you use a part of a project filename or directory and submit the Glue command.  You will receive a list of matching files and can add additional symbols to jump to locations within the desired file.  Add the ``@`` character and additional text to your query to jump to symbols in the file.  Add the ``#`` character and additional text to the query to search within the file.  And add the ``:`` character followed by a numeral to jump to a line number in the file.
 
@@ -127,7 +127,7 @@ Open the Glue help in the Glue view.
 
 .. code:: shell-session
 
-    █ glue help
+    $ glue help
 
 
 ⊙ ``glue localhost``
@@ -138,7 +138,7 @@ Open the default web browser to the local server at the URL http://localhost:800
 
 .. code:: shell-session
 
-    █ glue localhost [port]
+    $ glue localhost [port]
 
 
 ⊙ ``glue new``
@@ -149,7 +149,7 @@ Open a new Sublime Text buffer in the editor.
 
 .. code:: shell-session
 
-    █ glue new
+    $ glue new
 
 
 ⊙ ``glue open``
@@ -160,7 +160,7 @@ Open one or more files in the Sublime Text editor by filepath.
 
 .. code:: shell-session
 
-    █ glue open <filepath> [, filepath]
+    $ glue open <filepath> [, filepath]
 
 
 ⊙ ``glue path``
@@ -171,7 +171,7 @@ Display the system PATH that is used by Glue
 
 .. code:: shell-session
 
-     █ glue path
+     $ glue path
 
 
 ⊙ ``glue user``
@@ -182,7 +182,7 @@ Display an alphabetized list of your Glue user extensions
 
 .. code:: shell-session
 
-    █ glue user
+    $ glue user
 
 
 ⊙ ``glue wco``
@@ -193,6 +193,6 @@ Open one or more files in the Sublime Text editor by wildcard pattern
 
 .. code:: shell-session
 
-    █ glue wco <pattern>
+    $ glue wco <pattern>
 
 
