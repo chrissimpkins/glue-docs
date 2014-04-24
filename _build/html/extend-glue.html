@@ -231,14 +231,14 @@
 </div>
 <div class="section" id="system-utility-example">
 <h2>System Utility Example<a class="headerlink" href="#system-utility-example" title="Permalink to this headline">¶</a></h2>
-<p>Let&#8217;s make a command that allows us to view HTTP GET response headers for a web application that we are developing and call it <tt class="docutils literal"><span class="pre">head</span></tt>.  We&#8217;ll use cURL for this task.</p>
+<p>Let&#8217;s make a command that allows us to view HTTP GET response headers for a web application and call it <tt class="docutils literal"><span class="pre">head</span></tt>.  We&#8217;ll use cURL for this task.</p>
 <p>Add the following to your <tt class="docutils literal"><span class="pre">glue.json</span></tt> file:</p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;head&quot;</span> <span class="p">:</span> <span class="s">&quot;curl -I -s -L {{args}}&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Save the file and the command is immediately available for use.  Launch Glue and enter any URL as an argument to your command in order to see the GET response headers for the site in the Glue view:</p>
+<p>Save the file and the command is immediately available for use.  Launch Glue and enter a URL as an argument to your command in order to see the GET response headers for the site in the Glue view:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre>$ glue head www.supafresh.com
 </pre></div>
 </div>

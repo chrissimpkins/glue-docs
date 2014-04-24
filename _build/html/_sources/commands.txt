@@ -27,7 +27,7 @@ Command Usage
 
 ⊙ ``cd``
 ---------
-Change the working directory.  Directory state is maintained between calls to the shell until you submit the command ``exit``.  This command works on Unix, Linux, and Windows platforms.
+Change the working directory.  Directory state is maintained between calls to the shell until you submit the command ``exit``.  This command works on Mac OSX, Linux, and Windows platforms.
 
 **Usage**
 

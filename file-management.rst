@@ -50,4 +50,4 @@ File Management with System Utilities
 
 You can use system utilities to manage your project files with Glue just as you would from a separate terminal.
 
-For example, on Linux/Unix systems ``rm <filepath>`` will delete a file and ``rm -rf <dirpath>`` will remove the directory on ``dirpath`` and all of its contents. ``touch <filepath>`` will create a new file.
+For example, on Linux/Mac OSX systems ``rm <filepath>`` will delete a file and ``rm -rf <dirpath>`` will remove the directory on ``dirpath`` and all of its contents. ``touch <filepath>`` will create a new file.

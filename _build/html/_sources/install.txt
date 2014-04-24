@@ -46,7 +46,7 @@ Move the entire Glue directory into your Sublime Text Packages directory.
 Confirm Your PATH
 ------------------
 
-Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help (generally the case for Mac OSX users because of an issue with the assignment that takes place in this version of Sublime Text).  Never fear.  It is incredibly simple to correct this issue.
+Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help.  Never fear.  It is incredibly simple to correct this issue.
 
 Confirm that the correct string is being used by launching Glue (use one of the approaches below) and entering the command:
 
@@ -66,11 +66,11 @@ Open the Glue user settings file by using the Sublime Text menus to navigate to 
 		"glue_userpath" : "<YOUR PATH>"
 	}
 
-Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  Linux/Unix (including Mac OSX) users can find this by entering ``echo $SHELL`` in the terminal.
+Include your shell PATH settings as a colon (Mac OSX/Linux) or semicolon (Windows) delimited string.  Linux/Mac OSX users can find this by entering ``echo $SHELL`` in the terminal.
 
-Here is an example of an appropriate PATH setting for Unix/Linux users:
+Here is an example of an appropriate PATH setting for Mac OSX/Linux users:
 
-**Unix/Linux**
+**Mac OSX/Linux**
 
 .. code:: json
 
@@ -103,9 +103,9 @@ Set Your Default Shell
 -------------------------
 You have the option to assign your default shell in the ``glue_shellpath`` setting.  Open the ``Glue Settings - User`` JSON file and add a new line to it that includes the setting key with the value set to the path to your desired shell.
 
-Here's an example that demonstrates how to change the default shell to zsh on Unix/Linux boxes:
+Here's an example that demonstrates how to change the default shell to zsh on Mac OSX/Linux boxes:
 
-**Unix/Linux**
+**Mac OSX/Linux**
 
 .. code:: json
 
@@ -123,7 +123,7 @@ and to Powershell for Windows users:
 		"glue_shellpath": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
 	}
 
-Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment ``$SHELL`` (Unix/Linux) or ``%SHELL%`` (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn't exist):
+Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment ``$SHELL`` (Mac OSX/Linux) or ``%SHELL%`` (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn't exist):
 
 .. code::
 

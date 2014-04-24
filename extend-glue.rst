@@ -63,7 +63,7 @@ Your command is executed from your current working directory and data from the s
 
 System Utility Example
 ------------------------
-Let's make a command that allows us to view HTTP GET response headers for a web application that we are developing and call it ``head``.  We'll use cURL for this task.
+Let's make a command that allows us to view HTTP GET response headers for a web application and call it ``head``.  We'll use cURL for this task.
 
 Add the following to your ``glue.json`` file:
 
@@ -73,7 +73,7 @@ Add the following to your ``glue.json`` file:
 		"head" : "curl -I -s -L {{args}}"
 	}
 
-Save the file and the command is immediately available for use.  Launch Glue and enter any URL as an argument to your command in order to see the GET response headers for the site in the Glue view:
+Save the file and the command is immediately available for use.  Launch Glue and enter a URL as an argument to your command in order to see the GET response headers for the site in the Glue view:
 
 .. code:: bash
 

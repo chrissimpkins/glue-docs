@@ -197,7 +197,7 @@
 </div>
 <div class="section" id="confirm-your-path">
 <h2>Confirm Your PATH<a class="headerlink" href="#confirm-your-path" title="Permalink to this headline">¶</a></h2>
-<p>Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help (generally the case for Mac OSX users because of an issue with the assignment that takes place in this version of Sublime Text).  Never fear.  It is incredibly simple to correct this issue.</p>
+<p>Glue assigns a default user PATH from your environment PATH variable.  Frequently, it nails it, but on some installs it may require a bit of help.  Never fear.  It is incredibly simple to correct this issue.</p>
 <p>Confirm that the correct string is being used by launching Glue (use one of the approaches below) and entering the command:</p>
 <div class="code bash highlight-python"><div class="highlight"><pre>glue path
 </pre></div>
@@ -211,9 +211,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Include your shell PATH settings as a colon (Unix/Linux) or semicolon (Windows) delimited string.  Linux/Unix (including Mac OSX) users can find this by entering <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$SHELL</span></tt> in the terminal.</p>
-<p>Here is an example of an appropriate PATH setting for Unix/Linux users:</p>
-<p><strong>Unix/Linux</strong></p>
+<p>Include your shell PATH settings as a colon (Mac OSX/Linux) or semicolon (Windows) delimited string.  Linux/Mac OSX users can find this by entering <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">$SHELL</span></tt> in the terminal.</p>
+<p>Here is an example of an appropriate PATH setting for Mac OSX/Linux users:</p>
+<p><strong>Mac OSX/Linux</strong></p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;glue_userpath&quot;</span> <span class="p">:</span> <span class="s">&quot;/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;</span>
 <span class="p">}</span>
@@ -238,8 +238,8 @@
 <div class="section" id="set-your-default-shell">
 <h2>Set Your Default Shell<a class="headerlink" href="#set-your-default-shell" title="Permalink to this headline">¶</a></h2>
 <p>You have the option to assign your default shell in the <tt class="docutils literal"><span class="pre">glue_shellpath</span></tt> setting.  Open the <tt class="docutils literal"><span class="pre">Glue</span> <span class="pre">Settings</span> <span class="pre">-</span> <span class="pre">User</span></tt> JSON file and add a new line to it that includes the setting key with the value set to the path to your desired shell.</p>
-<p>Here&#8217;s an example that demonstrates how to change the default shell to zsh on Unix/Linux boxes:</p>
-<p><strong>Unix/Linux</strong></p>
+<p>Here&#8217;s an example that demonstrates how to change the default shell to zsh on Mac OSX/Linux boxes:</p>
+<p><strong>Mac OSX/Linux</strong></p>
 <div class="code json highlight-python"><div class="highlight"><pre><span class="p">{</span>
         <span class="s">&quot;glue_shellpath&quot;</span><span class="p">:</span> <span class="s">&quot;/usr/local/bin/zsh&quot;</span>
 <span class="p">}</span>
@@ -252,7 +252,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment <tt class="docutils literal"><span class="pre">$SHELL</span></tt> (Unix/Linux) or <tt class="docutils literal"><span class="pre">%SHELL%</span></tt> (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn&#8217;t exist):</p>
+<p>Save the file and restart Sublime Text. Note that the shell that is executed may differ from your environment <tt class="docutils literal"><span class="pre">$SHELL</span></tt> (Mac OSX/Linux) or <tt class="docutils literal"><span class="pre">%SHELL%</span></tt> (Windows) setting.  The Glue settings change does not alter your system variable assignments, or your default system shell settings, in any way.  To confirm that it is working, type a command that will cause the shell to bark at you (e.g. an executable that doesn&#8217;t exist):</p>
 <div class="code highlight-python"><div class="highlight"><pre>$ boguscmd
 zsh:1: command not found: boguscmd
 </pre></div>
